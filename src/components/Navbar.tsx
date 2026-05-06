@@ -72,6 +72,7 @@ export const Navbar = () => {
               <NavLink
                 key={i.to}
                 to={i.to}
+                end={i.end}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
                   `rounded-lg px-3 py-2.5 text-sm font-medium ${
