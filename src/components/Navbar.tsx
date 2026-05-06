@@ -10,6 +10,7 @@ export const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const items = [
+    { to: "/", label: "Home", end: true },
     { to: "/destinations", label: t("nav.destinations") },
     { to: "/tours", label: t("nav.tours") },
     { to: "/culture", label: t("nav.culture") },

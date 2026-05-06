@@ -10,6 +10,7 @@ import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Destinations from "./pages/Destinations.tsx";
 import Tours from "./pages/Tours.tsx";
+import TourDetail from "./pages/TourDetail.tsx";
 import Culture from "./pages/Culture.tsx";
 import Experience from "./pages/Experience.tsx";
 import Planning from "./pages/Planning.tsx";
@@ -32,6 +33,7 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/destinations" element={<Destinations />} />
               <Route path="/tours" element={<Tours />} />
+              <Route path="/tours/:slug" element={<TourDetail />} />
               <Route path="/culture" element={<Culture />} />
               <Route path="/experience" element={<Experience />} />
               <Route path="/planning" element={<Planning />} />

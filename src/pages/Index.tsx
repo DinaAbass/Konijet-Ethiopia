@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { ArrowRight, MapPin, Calendar, Users } from "lucide-react";
+import { ArrowRight, MapPin, Calendar, Users, Search } from "lucide-react";
+import { WeatherWidget } from "@/components/WeatherWidget";
 import hero from "@/assets/hero-ethiopia.jpg";
 import lalibela from "@/assets/dest-lalibela.jpg";
 import danakil from "@/assets/dest-danakil.jpg";
@@ -111,6 +113,12 @@ const Newsletter = () => (
 
 const Index = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const [q, setQ] = useState("");
+  const onSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    navigate(`/explore${q.trim() ? `?q=${encodeURIComponent(q.trim())}` : ""}`);
+  };
   return (
     <>
       {/* HERO */}
@@ -137,29 +145,33 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Floating quick-search card */}
+        {/* Floating functional search */}
         <div className="container-page -mt-10 relative z-10">
-          <div className="rounded-[2rem] bg-card shadow-elevated p-4 md:p-6 grid md:grid-cols-4 gap-3">
-            {[
-              { icon: MapPin, label: "Destination", value: "Anywhere in Ethiopia" },
-              { icon: Calendar, label: "When", value: "Add dates" },
-              { icon: Users, label: "Travellers", value: "2 adults" },
-            ].map((f, i) => (
-              <div key={i} className="flex items-center gap-3 rounded-2xl px-4 py-3 hover:bg-muted transition-smooth cursor-pointer">
-                <div className="rounded-full bg-primary/10 p-2 text-primary"><f.icon className="h-5 w-5" /></div>
-                <div>
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground">{f.label}</div>
-                  <div className="font-medium text-foreground">{f.value}</div>
-                </div>
+          <form onSubmit={onSearch} className="rounded-[2rem] bg-card shadow-elevated p-4 md:p-6 grid md:grid-cols-4 gap-3">
+            <label className="md:col-span-2 flex items-center gap-3 rounded-2xl px-4 py-3 bg-muted/40">
+              <Search className="h-5 w-5 text-primary" />
+              <input
+                value={q}
+                onChange={e => setQ(e.target.value)}
+                placeholder="Search 'Lalibela', 'Omo', 'coffee', 'trekking'…"
+                className="flex-1 bg-transparent outline-none text-foreground placeholder:text-muted-foreground"
+              />
+            </label>
+            <div className="hidden md:flex items-center gap-3 rounded-2xl px-4 py-3 bg-muted/40 cursor-default">
+              <Calendar className="h-5 w-5 text-primary" />
+              <div>
+                <div className="text-xs uppercase tracking-wider text-muted-foreground">When</div>
+                <div className="font-medium text-foreground">Any date</div>
               </div>
-            ))}
-            <Link to="/explore" className="rounded-2xl bg-primary text-primary-foreground font-semibold flex items-center justify-center gap-2 transition-smooth hover:bg-primary-glow">
+            </div>
+            <button type="submit" className="rounded-2xl bg-primary text-primary-foreground font-semibold flex items-center justify-center gap-2 transition-smooth hover:bg-primary-glow px-4 py-3">
               Search trips <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
+            </button>
+          </form>
         </div>
       </section>
 
+      <WeatherWidget />
       <TopThings />
       <WhatsHappening />
       <PlanAhead />
