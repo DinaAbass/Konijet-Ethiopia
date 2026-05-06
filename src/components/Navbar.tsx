@@ -10,6 +10,7 @@ export const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const items = [
+    { to: "/", label: "Home", end: true },
     { to: "/destinations", label: t("nav.destinations") },
     { to: "/tours", label: t("nav.tours") },
     { to: "/culture", label: t("nav.culture") },
@@ -34,6 +35,7 @@ export const Navbar = () => {
             <NavLink
               key={i.to}
               to={i.to}
+              end={i.end}
               className={({ isActive }) =>
                 `rounded-full px-3 py-2 text-sm font-medium transition-smooth ${
                   isActive ? "bg-primary text-primary-foreground" : "text-foreground/70 hover:text-foreground hover:bg-muted"
@@ -70,6 +72,7 @@ export const Navbar = () => {
               <NavLink
                 key={i.to}
                 to={i.to}
+                end={i.end}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
                   `rounded-lg px-3 py-2.5 text-sm font-medium ${
