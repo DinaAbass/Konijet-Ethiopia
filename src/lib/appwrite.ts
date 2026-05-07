@@ -1,17 +1,35 @@
-import { Client, Databases } from "appwrite";
+import { Client, Databases, Query } from "appwrite";
 
-// Public/anon client config — replace via env when wired to a real Appwrite project.
 const endpoint = import.meta.env.VITE_APPWRITE_ENDPOINT || "https://cloud.appwrite.io/v1";
 const projectId = import.meta.env.VITE_APPWRITE_PROJECT_ID || "";
-export const APPWRITE_DB_ID = import.meta.env.VITE_APPWRITE_DB_ID || "konijet";
+export const APPWRITE_DB_ID = import.meta.env.VITE_APPWRITE_DATABASE_ID || import.meta.env.VITE_APPWRITE_DB_ID || "konijet";
+export const APPWRITE_BUCKET_ID = import.meta.env.VITE_APPWRITE_BUCKET_ID || "";
 export const COLLECTIONS = {
-  destinations: import.meta.env.VITE_APPWRITE_DESTINATIONS || "destinations",
-  packages: import.meta.env.VITE_APPWRITE_PACKAGES || "packages",
+  destinations: import.meta.env.VITE_APPWRITE_DESTINATIONS_COLLECTION_ID || import.meta.env.VITE_APPWRITE_DESTINATIONS || "destinations",
+  packages: import.meta.env.VITE_APPWRITE_PACKAGES_COLLECTION_ID || import.meta.env.VITE_APPWRITE_PACKAGES || "packages",
 };
 
 export const client = new Client();
 if (projectId) client.setEndpoint(endpoint).setProject(projectId);
 export const databases = new Databases(client);
+export const db = databases;
+
+export function getImageUrl(fileId: string): string {
+  if (!APPWRITE_BUCKET_ID) return "";
+  return `${endpoint}/storage/buckets/${APPWRITE_BUCKET_ID}/files/${fileId}/view?project=${projectId}`;
+}
+
+export async function getPackagesByDestination(destinationId: string) {
+  if (!projectId) return [];
+  try {
+    const res = await databases.listDocuments(APPWRITE_DB_ID, COLLECTIONS.packages, [
+      Query.equal("destinationId", destinationId),
+      Query.equal("isAvailable", true),
+      Query.orderAsc("order"),
+    ]);
+    return res.documents;
+  } catch { return []; }
+}
 
 export type Destination = {
   id: string;
