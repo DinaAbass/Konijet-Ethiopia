@@ -104,27 +104,55 @@ const TourDetail = () => {
 
         <aside className="space-y-4">
           <div className="rounded-3xl bg-card border border-border p-6 shadow-elevated sticky top-24">
-            <div className="text-sm text-muted-foreground">From</div>
-            <div className="flex items-baseline gap-2">
+            <div className="text-sm text-muted-foreground">{t("tour.from", "From")}</div>
+            <div className="flex items-baseline gap-2 flex-wrap">
               {tour.oldPriceUSD && <span className="text-lg text-muted-foreground line-through">${tour.oldPriceUSD}</span>}
-              <span className="font-display text-4xl text-primary">${tour.priceUSD}</span>
+              {tour.oldPriceUSD && <span className="rounded-full bg-destructive text-destructive-foreground text-[10px] font-bold px-2 py-0.5">SALE</span>}
+              <span className={`font-display text-4xl ${tour.oldPriceUSD ? "text-emerald-600" : "text-primary"}`}>${tour.priceUSD}</span>
             </div>
-            <div className="text-xs text-muted-foreground">per person, twin share</div>
-            <Link to="/contact" className="mt-5 block w-full rounded-full bg-secondary text-secondary-foreground text-center px-6 py-3 font-semibold shadow-soft hover:shadow-gold transition-smooth">
-              Enquire about this trip
-            </Link>
+            <div className="text-xs text-muted-foreground">{t("tour.perPerson", "per person")}, twin share</div>
+            <button onClick={() => setBookOpen(true)} className="mt-5 block w-full rounded-full bg-secondary text-secondary-foreground text-center px-6 py-3 font-semibold shadow-soft hover:shadow-gold transition-smooth">
+              {t("tour.bookNow", "Book Now")}
+            </button>
             <Link to={`/explore?category=${tour.categories[0]}`} className="mt-2 block w-full rounded-full border border-border text-center px-6 py-3 text-sm font-medium hover:bg-muted transition-smooth">
-              See similar trips
+              {t("tour.similar", "See similar trips")}
             </Link>
             <div className="mt-5 pt-5 border-t border-border space-y-2 text-sm">
-              <div className="flex justify-between"><span className="text-muted-foreground">Duration</span><span className="font-medium">{tour.durationLabel}</span></div>
-              <div className="flex justify-between"><span className="text-muted-foreground">Region</span><span className="font-medium">{tour.region}</span></div>
-              <div className="flex justify-between"><span className="text-muted-foreground">Status</span><span className={`font-medium ${tour.available ? "text-emerald-600" : "text-destructive"}`}>{tour.available ? "Available" : "Sold out"}</span></div>
+              <div className="flex justify-between"><span className="text-muted-foreground">{t("tour.duration", "Duration")}</span><span className="font-medium">{tour.durationLabel}</span></div>
+              <div className="flex justify-between"><span className="text-muted-foreground">{t("tour.region", "Region")}</span><span className="font-medium">{tour.region}</span></div>
+              <div className="flex justify-between"><span className="text-muted-foreground">{t("tour.status", "Status")}</span><span className="font-medium text-emerald-600">{t("tour.available", "Available")}</span></div>
             </div>
+          </div>
+
+          <div className="rounded-3xl bg-gradient-warm border border-border p-6 shadow-soft">
+            <div className="flex items-start gap-3">
+              <CreditCard className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="font-semibold text-primary">{t("tour.payNow", "Pay now")}</div>
+                <p className="text-sm text-muted-foreground">{t("tour.payNowDesc", "and secure your trip")}</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3 mt-3">
+              <ShieldCheck className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="font-semibold text-primary">{t("tour.bestPrice", "Best price")}</div>
+                <p className="text-sm text-muted-foreground">{t("tour.bestPriceDesc", "guarantee on every booking")}</p>
+              </div>
+            </div>
+            <Link to="/contact" className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm font-semibold hover:bg-primary-glow transition-smooth">
+              <HelpCircle className="h-4 w-4" /> {t("tour.haveQuestion", "Have a question? Contact us")}
+            </Link>
           </div>
         </aside>
       </section>
 
+      <BookingModal
+        open={bookOpen}
+        onClose={() => setBookOpen(false)}
+        packageId={tour.slug}
+        packageName={tour.title}
+        destinationName={tour.region}
+      />
       <WeatherWidget />
     </>
   );
