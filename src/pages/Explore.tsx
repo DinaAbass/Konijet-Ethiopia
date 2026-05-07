@@ -99,9 +99,9 @@ const Explore = () => {
 
   const clearAll = () => navigate("/explore");
 
-  // City labels appear when zoomed in; country labels always (further out)
-  const cityLabels = altitude < 1.5 ? ETHIOPIAN_CITIES.map(c => ({ ...c, size: 0.7, color: "white", type: "city" as const })) : [];
-  const countryLabels = NEIGHBOURS.map(c => ({ ...c, size: altitude > 1.2 ? 1.4 : 0.9, color: "rgba(255,209,102,0.85)", type: "country" as const }));
+  // City labels appear when zoomed in; smaller as you zoom in further
+  const cityLabels = altitude < 1.5 ? ETHIOPIAN_CITIES.map(c => ({ ...c, size: Math.max(0.25, altitude * 0.35), color: "white", type: "city" as const })) : [];
+  const countryLabels = NEIGHBOURS.map(c => ({ ...c, size: Math.max(0.4, Math.min(1.1, altitude * 0.55)), color: "rgba(255,209,102,0.85)", type: "country" as const }));
   const labels = [...countryLabels, ...cityLabels];
 
   // Custom red pin HTML element
