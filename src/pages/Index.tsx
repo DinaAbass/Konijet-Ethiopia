@@ -93,23 +93,51 @@ const PlanAhead = () => {
   );
 };
 
-const Newsletter = () => (
-  <section className="container-page pb-24">
-    <div className="relative overflow-hidden rounded-[2.5rem] curve-card-tl bg-gradient-deep p-10 md:p-14 text-primary-foreground">
-      <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-secondary/30 blur-3xl" />
-      <div className="relative grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <h3 className="font-display text-3xl md:text-4xl">Sign up to Konijet news</h3>
-          <p className="mt-3 text-primary-foreground/80 max-w-md">Quarterly stories from Ethiopia's trails, festivals and food, with exclusive package launches.</p>
+const NEWSLETTER_URL = import.meta.env.VITE_N8N_NEWSLETTER_WEBHOOK_URL as string | undefined;
+
+const Newsletter = () => {
+  const { t, i18n } = useTranslation();
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.includes("@")) { setStatus("error"); return; }
+    setStatus("loading");
+    try {
+      if (!NEWSLETTER_URL) throw new Error("missing");
+      const r = await fetch(NEWSLETTER_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: "", email, phone: "", locale: i18n.language, source: "newsletter" }),
+      });
+      if (!r.ok) throw new Error("bad");
+      setStatus("success"); setEmail("");
+    } catch { setStatus("error"); }
+  };
+  return (
+    <section className="container-page pb-24">
+      <div className="relative overflow-hidden rounded-[2.5rem] curve-card-tl bg-gradient-deep p-10 md:p-14 text-primary-foreground">
+        <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-secondary/30 blur-3xl" />
+        <div className="relative grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 className="font-display text-3xl md:text-4xl">{t("newsletter.title", "Sign up to Konjit news")}</h3>
+            <p className="mt-3 text-primary-foreground/80 max-w-md">{t("newsletter.subtitle", "Quarterly stories from Ethiopia's trails, festivals and food, with exclusive package launches.")}</p>
+          </div>
+          <form onSubmit={onSubmit} className="flex flex-col gap-2">
+            <div className="flex flex-col sm:flex-row gap-3">
+              <input type="email" required value={email} onChange={e => setEmail(e.target.value)} placeholder="you@email.com" className="flex-1 rounded-full bg-background/10 border border-primary-foreground/20 px-5 py-3 text-primary-foreground placeholder:text-primary-foreground/50 outline-none focus:border-secondary" />
+              <button type="submit" disabled={status === "loading"} className="rounded-full bg-secondary px-6 py-3 font-semibold text-secondary-foreground transition-smooth hover:shadow-gold disabled:opacity-60">
+                {status === "loading" ? t("newsletter.sending", "Sending…") : t("newsletter.subscribe", "Subscribe")}
+              </button>
+            </div>
+            {status === "success" && <p className="text-sm text-emerald-300">🎉 {t("newsletter.success", "You're subscribed! Check your email for a welcome message.")}</p>}
+            {status === "error" && <p className="text-sm text-red-300">{t("newsletter.error", "Signup failed. Please try again.")}</p>}
+          </form>
         </div>
-        <form className="flex flex-col sm:flex-row gap-3">
-          <input type="email" placeholder="you@email.com" className="flex-1 rounded-full bg-background/10 border border-primary-foreground/20 px-5 py-3 text-primary-foreground placeholder:text-primary-foreground/50 outline-none focus:border-secondary" />
-          <button type="submit" className="rounded-full bg-secondary px-6 py-3 font-semibold text-secondary-foreground transition-smooth hover:shadow-gold">Subscribe</button>
-        </form>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 const Index = () => {
   const { t } = useTranslation();
