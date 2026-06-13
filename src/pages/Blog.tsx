@@ -1,11 +1,11 @@
 "use client";
 
-import Script from "next/script";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
 import { getBlogPosts } from "@/lib/blog";
 import { SiteLayout } from "@/components/SiteLayout";
+import { AdBanner } from "@/components/AdSense";
 
 export interface BlogPost {
   slug: string;
@@ -27,17 +27,11 @@ const Blog = () => {
 
   return (
     <SiteLayout>
-      <Script
-        id="blog-adsense"
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6775298130218510"
-        crossOrigin="anonymous"
-        strategy="afterInteractive"
-      />
       <section className="container-page py-16">
         <span className="text-xs uppercase tracking-widest text-secondary font-bold">{t("blog.eyebrow")}</span>
         <h1 className="font-display text-5xl text-primary mt-2">{t("blog.title")}</h1>
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
+        <AdBanner slot="4783671292" className="my-8" />
+        <div className="grid md:grid-cols-3 gap-6 mt-4">
           {posts.map(p => (
             <Link
               key={p.slug}

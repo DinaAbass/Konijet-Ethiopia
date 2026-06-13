@@ -1,16 +1,58 @@
 "use client";
 
 import Script from "next/script";
+import { useEffect, useState } from "react";
+
+// ── Consent helper ──────────────────────────────────────────────────────────
+const CONSENT_KEY = "konjit_cookie_consent";
+const CONSENT_VERSION = "1";
+
+type ConsentPreferences = {
+  version: string;
+  marketing: boolean;
+  analytics: boolean;
+};
+
+function readMarketing(): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    const raw = localStorage.getItem(CONSENT_KEY);
+    if (!raw) return false;
+    const parsed = JSON.parse(raw) as ConsentPreferences;
+    if (parsed.version !== CONSENT_VERSION) return false;
+    return parsed.marketing === true;
+  } catch {
+    return false;
+  }
+}
 
 /**
  * GoogleAdSense
- * Injects the AdSense async bootstrap script once per page.
- * Set NEXT_PUBLIC_GOOGLE_ADSENSE_ID in your .env to activate.
- * When the env var is absent (local dev / CI) the script is not loaded.
+ * Loads the AdSense bootstrap script **only** when:
+ *   - NEXT_PUBLIC_GOOGLE_ADSENSE_ID is set, and
+ *   - The user has accepted marketing cookies (GDPR / CCPA compliance).
+ *
+ * Listens for the `konjit:consentUpdate` event emitted by CookieConsent.tsx
+ * so ads load immediately after the user clicks "Accept All".
  */
 export function GoogleAdSense() {
   const id = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID;
-  if (!id || id === "your_google_adsense_id_here") return null;
+  const [allowed, setAllowed] = useState(false);
+
+  useEffect(() => {
+    // Check existing consent on mount
+    setAllowed(readMarketing());
+
+    // React to consent changes in the same tab
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent<ConsentPreferences>).detail;
+      setAllowed(detail.marketing === true);
+    };
+    window.addEventListener("konjit:consentUpdate", handler);
+    return () => window.removeEventListener("konjit:consentUpdate", handler);
+  }, []);
+
+  if (!id || !allowed) return null;
 
   return (
     <Script
@@ -34,14 +76,27 @@ interface AdBannerProps {
 /**
  * AdBanner
  * Drop this wherever you want an ad unit.
- * Renders nothing in local dev (no AdSense ID set).
+ * Renders nothing if marketing cookies have not been accepted.
  *
  * Usage:
  *   <AdBanner slot="1234567890" />
  */
 export function AdBanner({ slot, layout = "responsive", className = "" }: AdBannerProps) {
   const id = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID;
-  if (!id || id === "your_google_adsense_id_here") return null;
+  const [allowed, setAllowed] = useState(false);
+
+  useEffect(() => {
+    setAllowed(readMarketing());
+
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent<ConsentPreferences>).detail;
+      setAllowed(detail.marketing === true);
+    };
+    window.addEventListener("konjit:consentUpdate", handler);
+    return () => window.removeEventListener("konjit:consentUpdate", handler);
+  }, []);
+
+  if (!id || !allowed) return null;
 
   return (
     <div className={`adsense-wrapper ${className}`}>
