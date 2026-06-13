@@ -1,11 +1,13 @@
+"use client";
+
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { X, Loader2, MessageCircle, Mail } from "lucide-react";
 import { z } from "zod";
 
-const PHONE = (import.meta.env.VITE_WHATSAPP_NUMBER || "+251911000000").replace(/[^\d]/g, "");
-const EMAIL = import.meta.env.VITE_COMPANY_EMAIL || "info@konjetethiopia.com";
-const BOOKING_URL = import.meta.env.VITE_N8N_BOOKING_WEBHOOK_URL as string | undefined;
+const PHONE = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+251911000000").replace(/[^\d]/g, "");
+const EMAIL = process.env.NEXT_PUBLIC_COMPANY_EMAIL || "info@konijetethiopia.qzz.io";
+const BOOKING_URL = process.env.NEXT_PUBLIC_N8N_BOOKING_WEBHOOK_URL as string | undefined;
 
 const schema = z.object({
   name: z.string().trim().min(2).max(100),
@@ -76,7 +78,7 @@ export const BookingModal = ({ open, onClose, packageId, packageName, destinatio
         {status === "success" ? (
           <div className="mt-6 space-y-4">
             <div className="rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 p-4 text-sm">
-              ✅ {t("booking.success", "Booking received! We'll contact you within 24 hours.")}
+              {t("booking.success", "Booking received! We'll contact you within 24 hours.")}
             </div>
             <div className="grid grid-cols-2 gap-3">
               <a href={waHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-600 text-white py-2.5 text-sm font-semibold">

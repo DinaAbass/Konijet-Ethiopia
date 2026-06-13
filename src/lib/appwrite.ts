@@ -1,12 +1,12 @@
 import { Client, Databases, Query } from "appwrite";
 
-const endpoint = import.meta.env.VITE_APPWRITE_ENDPOINT || "https://cloud.appwrite.io/v1";
-const projectId = import.meta.env.VITE_APPWRITE_PROJECT_ID || "";
-export const APPWRITE_DB_ID = import.meta.env.VITE_APPWRITE_DATABASE_ID || import.meta.env.VITE_APPWRITE_DB_ID || "konijet";
-export const APPWRITE_BUCKET_ID = import.meta.env.VITE_APPWRITE_BUCKET_ID || "";
+const endpoint = process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT || "https://cloud.appwrite.io/v1";
+const projectId = process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID || "";
+export const APPWRITE_DB_ID = process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID || process.env.NEXT_PUBLIC_APPWRITE_DB_ID || "konijet";
+export const APPWRITE_BUCKET_ID = process.env.NEXT_PUBLIC_APPWRITE_BUCKET_ID || "";
 export const COLLECTIONS = {
-  destinations: import.meta.env.VITE_APPWRITE_DESTINATIONS_COLLECTION_ID || import.meta.env.VITE_APPWRITE_DESTINATIONS || "destinations",
-  packages: import.meta.env.VITE_APPWRITE_PACKAGES_COLLECTION_ID || import.meta.env.VITE_APPWRITE_PACKAGES || "packages",
+  destinations: process.env.NEXT_PUBLIC_APPWRITE_DESTINATIONS_COLLECTION_ID || process.env.NEXT_PUBLIC_APPWRITE_DESTINATIONS || "destinations",
+  packages: process.env.NEXT_PUBLIC_APPWRITE_PACKAGES_COLLECTION_ID || process.env.NEXT_PUBLIC_APPWRITE_PACKAGES || "packages",
 };
 
 export const client = new Client();
@@ -22,7 +22,7 @@ export function getImageUrl(fileId: string): string {
 export async function getPackagesByDestination(destinationId: string) {
   if (!projectId) return [];
   try {
-    const res = await databases.listDocuments(APPWRITE_DB_ID, COLLECTIONS.packages, [
+    const res = await databases.listDocuments(APPWRITE_DB_ID, COLLECTIONS.packages as any, [
       Query.equal("destinationId", destinationId),
       Query.equal("isAvailable", true),
       Query.orderAsc("order"),
@@ -53,12 +53,12 @@ export type TourPackage = {
   highlights: string[];
 };
 
-import lalibela from "@/assets/dest-lalibela.jpg";
-import danakil from "@/assets/dest-danakil.jpg";
-import omo from "@/assets/dest-omo.jpg";
-import axum from "@/assets/dest-axum.jpg";
-import bale from "@/assets/dest-bale.jpg";
-import simien from "@/assets/hero-ethiopia.jpg";
+const lalibela = "/img/dest-lalibela.jpg";
+const danakil = "/img/dest-danakil.jpg";
+const omo = "/img/dest-omo.jpg";
+const axum = "/img/dest-axum.jpg";
+const bale = "/img/dest-bale.jpg";
+const simien = "/img/hero-ethiopia.jpg";
 
 // Local fallback so the site is fully populated until Appwrite collections exist.
 const FALLBACK_DESTINATIONS: Destination[] = [
@@ -82,7 +82,7 @@ const FALLBACK_PACKAGES: TourPackage[] = [
 export async function getDestinations(): Promise<Destination[]> {
   if (!projectId) return FALLBACK_DESTINATIONS;
   try {
-    const res = await databases.listDocuments(APPWRITE_DB_ID, COLLECTIONS.destinations);
+    const res = await databases.listDocuments(APPWRITE_DB_ID, COLLECTIONS.destinations as any);
     return res.documents.map((d: any) => ({ ...d, id: d.$id }));
   } catch {
     return FALLBACK_DESTINATIONS;
@@ -94,7 +94,7 @@ export async function getPackages(destinationSlug?: string): Promise<TourPackage
     return destinationSlug ? FALLBACK_PACKAGES.filter(p => p.destinationSlug === destinationSlug) : FALLBACK_PACKAGES;
   }
   try {
-    const res = await databases.listDocuments(APPWRITE_DB_ID, COLLECTIONS.packages);
+    const res = await databases.listDocuments(APPWRITE_DB_ID, COLLECTIONS.packages as any);
     const all = res.documents.map((d: any) => ({ ...d, id: d.$id })) as TourPackage[];
     return destinationSlug ? all.filter(p => p.destinationSlug === destinationSlug) : all;
   } catch {

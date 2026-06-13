@@ -1,14 +1,14 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# *
 User-agent: *
 Allow: /
+
+# *
+User-agent: *
+Disallow: /api/
+Disallow: /admin/
+
+# Host
+Host: https://konjetethiopia.qzz.io
+
+# Sitemaps
+Sitemap: https://konjetethiopia.qzz.io/sitemap.xml

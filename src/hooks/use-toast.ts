@@ -39,11 +39,11 @@ type Action =
     }
   | {
       type: ActionType["DISMISS_TOAST"];
-      toastId?: ToasterToast["id"];
+      toastId: ToasterToast["id"];
     }
   | {
       type: ActionType["REMOVE_TOAST"];
-      toastId?: ToasterToast["id"];
+      toastId: ToasterToast["id"];
     };
 
 interface State {
@@ -98,7 +98,7 @@ export const reducer = (state: State, action: Action): State => {
       return {
         ...state,
         toasts: state.toasts.map((t) =>
-          t.id === toastId || toastId === undefined
+          t.id === toastId || !toastId
             ? {
                 ...t,
                 open: false,
@@ -108,7 +108,7 @@ export const reducer = (state: State, action: Action): State => {
       };
     }
     case "REMOVE_TOAST":
-      if (action.toastId === undefined) {
+      if (!action.toastId) {
         return {
           ...state,
           toasts: [],
@@ -179,7 +179,7 @@ function useToast() {
   return {
     ...state,
     toast,
-    dismiss: (toastId?: string) => dispatch({ type: "DISMISS_TOAST", toastId }),
+    dismiss: (toastId?: string) => dispatch({ type: "DISMISS_TOAST", toastId: toastId ?? "" }),
   };
 }
 

@@ -1,12 +1,14 @@
+"use client";
+
 import { ContentPage } from "@/components/ContentPage";
 import { useTranslation } from "react-i18next";
-import hero from "@/assets/culture-coffee.jpg";
-import lalibela from "@/assets/dest-lalibela.jpg";
-import axum from "@/assets/dest-axum.jpg";
-import omo from "@/assets/dest-omo.jpg";
-import danakil from "@/assets/dest-danakil.jpg";
-import simien from "@/assets/hero-ethiopia.jpg";
-import bale from "@/assets/dest-bale.jpg";
+const hero = "/img/culture-coffee.jpg";
+const lalibela = "/img/dest-lalibela.jpg";
+const axum = "/img/dest-axum.jpg";
+const omo = "/img/dest-omo.jpg";
+const danakil = "/img/dest-danakil.jpg";
+const simien = "/img/hero-ethiopia.jpg";
+const bale = "/img/dest-bale.jpg";
 
 const Culture = () => {
   const { t } = useTranslation();
@@ -25,7 +27,7 @@ const Culture = () => {
         { heading: t("culture.b5.h", "Danakil Depression – Otherworldly Landscape"), body: [t("culture.b5.p", "One of the hottest places on Earth, Danakil features bright yellow sulfur springs, vast salt flats and active volcanoes. The land feels lunar — strange, beautiful and unforgettable.")], image: danakil },
         { heading: t("culture.b6.h", "Omo Valley – Ancient Cultures"), body: [t("culture.b6.p", "The Omo Valley is home to tribes with rich, living traditions — body painting, lip plates, bull-jumping ceremonies — practiced daily by people who have shaped this landscape for centuries.")], image: omo },
         { heading: t("culture.b7.h", "Harar – Walled City of Saints"), body: [t("culture.b7.p", "A maze of alleyways and over 80 mosques, Harar ends each day with the famous hyena feeding ritual outside its ancient walls.")], image: bale },
-        { heading: t("culture.b8.h", "Why Travel With Konjit"), body: [t("culture.b8.p", "With Konjit Ethiopia, you get more than a trip — you get a real story. We help you find the true heart of this land, one friendly face and stunning view at a time.")] },
+        { heading: t("culture.b8.h", "Why Travel With Konijet"), body: [t("culture.b8.p", "With Konijet Ethiopia, you get more than a trip — you get a real story. We help you find the true heart of this land, one friendly face and stunning view at a time.")] },
       ]}
     />
   );

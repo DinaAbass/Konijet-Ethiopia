@@ -1,7 +1,9 @@
+"use client";
+
 import { useEffect, useState } from "react";
-import { Helmet } from "react-helmet-async";
+import Head from "next/head";
+import Link from "next/link";
 import { getDestinations, type Destination } from "@/lib/appwrite";
-import { Link } from "react-router-dom";
 
 interface Props {
   title: string;
@@ -15,10 +17,10 @@ export const SectionPage = ({ title, eyebrow, blurb, heroImage }: Props) => {
   useEffect(() => { getDestinations().then(setDests); }, []);
   return (
     <>
-      <Helmet>
+      <Head>
         <title>{title} · Konijet Ethiopia</title>
         <meta name="description" content={blurb} />
-      </Helmet>
+      </Head>
       <section className="container-page pt-6">
         <div className="relative overflow-hidden rounded-[2.5rem] curve-card-tr">
           <img src={heroImage} alt={title} className="h-[48vh] min-h-[360px] w-full object-cover" />
@@ -36,7 +38,7 @@ export const SectionPage = ({ title, eyebrow, blurb, heroImage }: Props) => {
       <section className="container-page py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {dests.map((d, i) => (
-            <Link key={d.id} to="/explore" className={`group relative overflow-hidden rounded-[2rem] shadow-soft transition-smooth hover:shadow-elevated ${i % 2 ? "curve-card-bl" : "curve-card-tr"}`}>
+            <Link key={d.id} href="/explore" className={`group relative overflow-hidden rounded-[2rem] shadow-soft transition-smooth hover:shadow-elevated ${i % 2 ? "curve-card-bl" : "curve-card-tr"}`}>
               <img src={d.image} alt={d.name} loading="lazy" className="h-72 w-full object-cover transition-smooth group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-hero" />
               <div className="absolute inset-x-0 bottom-0 p-5 text-primary-foreground">

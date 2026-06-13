@@ -1,12 +1,14 @@
+"use client";
+
 import { ContentPage } from "@/components/ContentPage";
 import { useTranslation } from "react-i18next";
-import hero from "@/assets/hero-ethiopia.jpg";
-import lalibela from "@/assets/dest-lalibela.jpg";
-import axum from "@/assets/dest-axum.jpg";
-import omo from "@/assets/dest-omo.jpg";
-import danakil from "@/assets/dest-danakil.jpg";
-import bale from "@/assets/dest-bale.jpg";
-import city from "@/assets/cat-city.jpg";
+const hero = "/img/hero-ethiopia.jpg";
+const lalibela = "/img/dest-lalibela.jpg";
+const axum = "/img/dest-axum.jpg";
+const omo = "/img/dest-omo.jpg";
+const danakil = "/img/dest-danakil.jpg";
+const bale = "/img/dest-bale.jpg";
+const city = "/img/cat-city.webp";
 
 const Destinations = () => {
   const { t } = useTranslation();

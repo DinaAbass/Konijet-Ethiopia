@@ -1,25 +1,71 @@
-import { Helmet } from "react-helmet-async";
-const posts = [
-  { slug: "13-months-of-sunshine", title: "Why Ethiopia has 13 months of sunshine", excerpt: "Inside the Ge'ez calendar and what it means for travellers." },
-  { slug: "coffee-origin-story", title: "The origin of coffee — a Kaldi tale", excerpt: "Tracing the bean from a goatherd in Kaffa to the world's cups." },
-  { slug: "lalibela-pilgrim-guide", title: "A pilgrim's guide to Lalibela", excerpt: "How to experience the rock-hewn churches respectfully." },
-];
-const Blog = () => (
-  <>
-    <Helmet><title>Blog · Konijet Ethiopia</title></Helmet>
-    <section className="container-page py-16">
-      <span className="text-xs uppercase tracking-widest text-secondary font-bold">Stories</span>
-      <h1 className="font-display text-5xl text-primary mt-2">Field notes from Ethiopia</h1>
-      <div className="grid md:grid-cols-3 gap-6 mt-12">
-        {posts.map(p => (
-          <article key={p.slug} className="rounded-[2rem] curve-card-tr bg-card border border-border p-6 shadow-soft transition-smooth hover:shadow-elevated">
-            <h2 className="font-display text-2xl text-primary leading-snug">{p.title}</h2>
-            <p className="mt-3 text-muted-foreground">{p.excerpt}</p>
-            <span className="mt-5 inline-block text-secondary font-semibold">Read article →</span>
-          </article>
-        ))}
-      </div>
-    </section>
-  </>
-);
+"use client";
+
+import Script from "next/script";
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import { useState, useEffect } from "react";
+import { getBlogPosts } from "@/lib/blog";
+import { SiteLayout } from "@/components/SiteLayout";
+
+export interface BlogPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  author: string;
+  coverImage?: string;
+}
+
+const Blog = () => {
+  const { t } = useTranslation();
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+
+  useEffect(() => {
+    const posts = getBlogPosts();
+    setPosts(posts);
+  }, []);
+
+  return (
+    <SiteLayout>
+      <Script
+        id="blog-adsense"
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6775298130218510"
+        crossOrigin="anonymous"
+        strategy="afterInteractive"
+      />
+      <section className="container-page py-16">
+        <span className="text-xs uppercase tracking-widest text-secondary font-bold">{t("blog.eyebrow")}</span>
+        <h1 className="font-display text-5xl text-primary mt-2">{t("blog.title")}</h1>
+        <div className="grid md:grid-cols-3 gap-6 mt-12">
+          {posts.map(p => (
+            <Link
+              key={p.slug}
+              href={`/blog/${p.slug}`}
+              className="group block rounded-[2rem] curve-card-tr bg-card border border-border overflow-hidden shadow-soft transition-smooth hover:shadow-elevated"
+            >
+              {p.coverImage ? (
+                <div className="relative w-full h-48 overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={p.coverImage}
+                    alt={p.title}
+                    className="w-full h-full object-cover transition-smooth group-hover:scale-105"
+                  />
+                </div>
+              ) : null}
+              <div className={p.coverImage ? "p-6" : "p-6"}>
+                <h2 className="font-display text-2xl text-primary leading-snug">{p.title}</h2>
+                <p className="mt-3 text-muted-foreground">{p.excerpt}</p>
+                <span className="mt-5 inline-block text-secondary font-semibold">
+                  {t("blog.readArticle")} →
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </SiteLayout>
+  );
+};
 export default Blog;

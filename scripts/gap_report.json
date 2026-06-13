@@ -1,0 +1,1944 @@
+{
+  "am": {
+    "name": "Amharic",
+    "totalKeys": 390,
+    "missingCount": 0,
+    "missingKeys": [],
+    "extraCount": 5,
+    "extraKeys": [
+      "Pricing & packages",
+      "General inquiry",
+      "WhatsApp",
+      "Email",
+      "Adventure & Safari"
+    ],
+    "fallbackCount": 15,
+    "fallbacks": [
+      {
+        "key": "whatsapp.opt_pricing",
+        "value": "Pricing & packages"
+      },
+      {
+        "key": "whatsapp.opt_inquiry",
+        "value": "General inquiry"
+      },
+      {
+        "key": "booking.whatsapp",
+        "value": "WhatsApp"
+      },
+      {
+        "key": "booking.email_btn",
+        "value": "Email"
+      },
+      {
+        "key": "categories.adventure-safari.name",
+        "value": "Adventure & Safari"
+      },
+      {
+        "key": "categories.adventure-safari.blurb",
+        "value": "Wildlife, volcanoes, salt flats and epic African landscapes."
+      },
+      {
+        "key": "categories.birding.name",
+        "value": "Birding"
+      },
+      {
+        "key": "categories.birding.blurb",
+        "value": "Track endemic species across the Great Rift Valley and highlands."
+      },
+      {
+        "key": "categories.city-day-trips.name",
+        "value": "City Tours & Day Trips"
+      },
+      {
+        "key": "categories.city-day-trips.blurb",
+        "value": "Markets, museums, food and volcanic lake escapes from the capital."
+      },
+      {
+        "key": "categories.coffee.name",
+        "value": "Coffee Origin"
+      },
+      {
+        "key": "categories.coffee.blurb",
+        "value": "Journey through the birthplace of coffee, from bean to cup."
+      },
+      {
+        "key": "categories.combined.name",
+        "value": "Combined Classics"
+      },
+      {
+        "key": "categories.combined.blurb",
+        "value": "Grand multi-region loops — north, south and east in one journey."
+      },
+      {
+        "key": "categories.cultural.name",
+        "value": "Cultural & People"
+      }
+    ]
+  },
+  "ar": {
+    "name": "Arabic",
+    "totalKeys": 385,
+    "missingCount": 0,
+    "missingKeys": [],
+    "extraCount": 0,
+    "extraKeys": [],
+    "fallbackCount": 0,
+    "fallbacks": []
+  },
+  "zh": {
+    "name": "Chinese",
+    "totalKeys": 385,
+    "missingCount": 0,
+    "missingKeys": [],
+    "extraCount": 0,
+    "extraKeys": [],
+    "fallbackCount": 0,
+    "fallbacks": []
+  },
+  "es": {
+    "name": "Spanish",
+    "totalKeys": 385,
+    "missingCount": 0,
+    "missingKeys": [],
+    "extraCount": 0,
+    "extraKeys": [],
+    "fallbackCount": 10,
+    "fallbacks": [
+      {
+        "key": "booking.whatsapp",
+        "value": "WhatsApp"
+      },
+      {
+        "key": "experience.immersive.e1.tag",
+        "value": "Cultural"
+      },
+      {
+        "key": "experience.immersive.e4.eyebrow",
+        "value": "Lalibela, Amhara"
+      },
+      {
+        "key": "experience.immersive.e4.tag",
+        "value": "Festival"
+      },
+      {
+        "key": "experience.testimonials.t1.name",
+        "value": "Astrid K."
+      },
+      {
+        "key": "experience.testimonials.t2.name",
+        "value": "James O."
+      },
+      {
+        "key": "experience.testimonials.t3.name",
+        "value": "Mireille D."
+      },
+      {
+        "key": "experience.testimonials.t3.origin",
+        "value": "Montreal"
+      },
+      {
+        "key": "weather.celsius",
+        "value": "Celsius"
+      },
+      {
+        "key": "weather.fahrenheit",
+        "value": "Fahrenheit"
+      }
+    ]
+  },
+  "fr": {
+    "name": "French",
+    "totalKeys": 413,
+    "missingCount": 0,
+    "missingKeys": [],
+    "extraCount": 28,
+    "extraKeys": [
+      "1. Introduction",
+      "7. Cookies",
+      "15. Contact",
+      "Destinations",
+      "Culture",
+      "Contact",
+      "WhatsApp",
+      "Lalibela, Amhara",
+      "Festival",
+      "Astrid K.",
+      "James O.",
+      "Mireille D.",
+      "{{count}} tour",
+      "{{count}} tours",
+      "Transport",
+      "Celsius",
+      "Fahrenheit",
+      "Lalibela",
+      "Gondar",
+      "Bahir Dar",
+      "Mekelle",
+      "Dire Dawa",
+      "Harar",
+      "Awassa",
+      "Jinka",
+      "Arba Minch",
+      "Djibouti",
+      "Kenya"
+    ],
+    "fallbackCount": 16,
+    "fallbacks": [
+      {
+        "key": "nav.destinations",
+        "value": "Destinations"
+      },
+      {
+        "key": "nav.culture",
+        "value": "Culture"
+      },
+      {
+        "key": "nav.contact",
+        "value": "Contact"
+      },
+      {
+        "key": "booking.whatsapp",
+        "value": "WhatsApp"
+      },
+      {
+        "key": "index.tags.culture",
+        "value": "Culture"
+      },
+      {
+        "key": "experience.immersive.e4.eyebrow",
+        "value": "Lalibela, Amhara"
+      },
+      {
+        "key": "experience.immersive.e4.tag",
+        "value": "Festival"
+      },
+      {
+        "key": "experience.testimonials.t1.name",
+        "value": "Astrid K."
+      },
+      {
+        "key": "experience.testimonials.t2.name",
+        "value": "James O."
+      },
+      {
+        "key": "experience.testimonials.t3.name",
+        "value": "Mireille D."
+      },
+      {
+        "key": "explore.toursCount",
+        "value": "{{count}} tour"
+      },
+      {
+        "key": "explore.toursCount_plural",
+        "value": "{{count}} tours"
+      },
+      {
+        "key": "toursPage.tourCount",
+        "value": "{{count}} tours"
+      },
+      {
+        "key": "plan.transport.h",
+        "value": "Transport"
+      },
+      {
+        "key": "weather.celsius",
+        "value": "Celsius"
+      },
+      {
+        "key": "weather.fahrenheit",
+        "value": "Fahrenheit"
+      }
+    ]
+  },
+  "pt": {
+    "name": "Portuguese",
+    "totalKeys": 385,
+    "missingCount": 0,
+    "missingKeys": [],
+    "extraCount": 0,
+    "extraKeys": [],
+    "fallbackCount": 24,
+    "fallbacks": [
+      {
+        "key": "booking.whatsapp",
+        "value": "WhatsApp"
+      },
+      {
+        "key": "experience.immersive.e1.tag",
+        "value": "Cultural"
+      },
+      {
+        "key": "experience.immersive.e4.eyebrow",
+        "value": "Lalibela, Amhara"
+      },
+      {
+        "key": "experience.immersive.e4.tag",
+        "value": "Festival"
+      },
+      {
+        "key": "experience.testimonials.t1.name",
+        "value": "Astrid K."
+      },
+      {
+        "key": "experience.testimonials.t2.name",
+        "value": "James O."
+      },
+      {
+        "key": "experience.testimonials.t3.name",
+        "value": "Mireille D."
+      },
+      {
+        "key": "experience.testimonials.t3.origin",
+        "value": "Montreal"
+      },
+      {
+        "key": "dest.lalibela.b1",
+        "value": "Bete Giyorgis (St. George's) — iconic cross-shaped church"
+      },
+      {
+        "key": "dest.lalibela.b2",
+        "value": "Asheton Maryam Monastery — sweeping mountain views"
+      },
+      {
+        "key": "dest.lalibela.b3",
+        "value": "Best time: January for Genna; October–March for dry weather"
+      },
+      {
+        "key": "dest.axum.h",
+        "value": "Axum – Ancient Kingdom"
+      },
+      {
+        "key": "dest.bale.h",
+        "value": "Bale Mountains – Wildlife Paradise"
+      },
+      {
+        "key": "plan.title",
+        "value": "Plan your trip"
+      },
+      {
+        "key": "plan.eyebrow",
+        "value": "Practical guide"
+      },
+      {
+        "key": "plan.blurb",
+        "value": "Everything you need: arrival, visas, packing, weather and money."
+      },
+      {
+        "key": "plan.arrival.h",
+        "value": "Getting Here"
+      },
+      {
+        "key": "plan.arrival.b1",
+        "value": "Ethiopian Airlines connects 130+ international destinations"
+      },
+      {
+        "key": "plan.arrival.b2",
+        "value": "Other carriers: Emirates, Turkish, Qatar, Lufthansa, FlyDubai, EgyptAir"
+      },
+      {
+        "key": "plan.arrival.b3",
+        "value": "Domestic flights cover Lalibela, Gondar, Axum, Bahir Dar, Arba Minch, Jinka, Mekele"
+      },
+      {
+        "key": "plan.arrival.b4",
+        "value": "On arrival, your Konijet guide will meet you at arrivals with a name sign"
+      },
+      {
+        "key": "plan.visa.h",
+        "value": "Visa & Entry"
+      },
+      {
+        "key": "weather.celsius",
+        "value": "Celsius"
+      },
+      {
+        "key": "weather.fahrenheit",
+        "value": "Fahrenheit"
+      }
+    ]
+  },
+  "it": {
+    "name": "Italian",
+    "totalKeys": 385,
+    "missingCount": 0,
+    "missingKeys": [],
+    "extraCount": 0,
+    "extraKeys": [],
+    "fallbackCount": 15,
+    "fallbacks": [
+      {
+        "key": "footer.privacy",
+        "value": "Privacy"
+      },
+      {
+        "key": "booking.email",
+        "value": "Email"
+      },
+      {
+        "key": "booking.whatsapp",
+        "value": "WhatsApp"
+      },
+      {
+        "key": "booking.email_btn",
+        "value": "Email"
+      },
+      {
+        "key": "experience.immersive.e4.eyebrow",
+        "value": "Lalibela, Amhara"
+      },
+      {
+        "key": "experience.immersive.e4.tag",
+        "value": "Festival"
+      },
+      {
+        "key": "experience.testimonials.t1.name",
+        "value": "Astrid K."
+      },
+      {
+        "key": "experience.testimonials.t2.name",
+        "value": "James O."
+      },
+      {
+        "key": "experience.testimonials.t3.name",
+        "value": "Mireille D."
+      },
+      {
+        "key": "experience.testimonials.t3.origin",
+        "value": "Montreal"
+      },
+      {
+        "key": "explore.toursCount",
+        "value": "{{count}} tour"
+      },
+      {
+        "key": "explore.inCategory",
+        "value": "In {{category}}"
+      },
+      {
+        "key": "contactPage.emailLabel",
+        "value": "Email"
+      },
+      {
+        "key": "weather.celsius",
+        "value": "Celsius"
+      },
+      {
+        "key": "weather.fahrenheit",
+        "value": "Fahrenheit"
+      }
+    ]
+  },
+  "ru": {
+    "name": "Russian",
+    "totalKeys": 385,
+    "missingCount": 0,
+    "missingKeys": [],
+    "extraCount": 0,
+    "extraKeys": [],
+    "fallbackCount": 59,
+    "fallbacks": [
+      {
+        "key": "booking.whatsapp",
+        "value": "WhatsApp"
+      },
+      {
+        "key": "experience.pillars.cookAndEat.body",
+        "value": "Hands-on injera making, spice market tours and home-kitchen dinners. Ethiopian cuisine as it is actually eaten."
+      },
+      {
+        "key": "experience.pillars.festivalAccess.title",
+        "value": "Festival Access"
+      },
+      {
+        "key": "experience.pillars.festivalAccess.body",
+        "value": "Join Timkat processions, Hamar bull-jumping and Meskel bonfires — not as a spectator, but as a welcomed guest."
+      },
+      {
+        "key": "experience.pillars.creativeTravel.title",
+        "value": "Creative Travel"
+      },
+      {
+        "key": "experience.pillars.creativeTravel.body",
+        "value": "Photography walks, textile workshops, and studio visits with Addis artists. Bring home more than photos."
+      },
+      {
+        "key": "experience.immersive.eyebrow",
+        "value": "Signature Moments"
+      },
+      {
+        "key": "experience.immersive.title",
+        "value": "Experiences that stay with you"
+      },
+      {
+        "key": "experience.immersive.viewAll",
+        "value": "View all tours"
+      },
+      {
+        "key": "experience.immersive.e1.eyebrow",
+        "value": "South Omo Valley"
+      },
+      {
+        "key": "experience.immersive.e1.title",
+        "value": "A Morning with the Hamar"
+      },
+      {
+        "key": "experience.immersive.e1.body",
+        "value": "Arrive at a Hamar settlement before dawn. Watch cattle leave the boma, share black tea and sit in silence as the village wakes. Your guide — who grew up here — translates not just words but meaning."
+      },
+      {
+        "key": "experience.immersive.e1.tag",
+        "value": "Cultural"
+      },
+      {
+        "key": "experience.immersive.e1.duration",
+        "value": "Full day"
+      },
+      {
+        "key": "experience.immersive.e2.eyebrow",
+        "value": "Kaffa Forest, Jimma"
+      },
+      {
+        "key": "experience.immersive.e2.title",
+        "value": "The Wild Coffee Forest"
+      },
+      {
+        "key": "experience.immersive.e2.body",
+        "value": "Walk into the highland forest where Coffea arabica grows wild. Harvest cherries from trees that seed themselves. Sit with a farmer's family for a three-round coffee ceremony as rain falls on the canopy above."
+      },
+      {
+        "key": "experience.immersive.e2.tag",
+        "value": "Coffee"
+      },
+      {
+        "key": "experience.testimonials.t2.name",
+        "value": "James O."
+      },
+      {
+        "key": "experience.testimonials.t2.origin",
+        "value": "London"
+      },
+      {
+        "key": "experience.testimonials.t3.quote",
+        "value": "Attending Timkat in Gondar changed my understanding of what a festival can be. I felt like a guest, not a tourist."
+      },
+      {
+        "key": "experience.testimonials.t3.name",
+        "value": "Mireille D."
+      },
+      {
+        "key": "experience.testimonials.t3.origin",
+        "value": "Montreal"
+      },
+      {
+        "key": "experience.cta.eyebrow",
+        "value": "Ready to go?"
+      },
+      {
+        "key": "experience.cta.title",
+        "value": "Your Ethiopia is waiting"
+      },
+      {
+        "key": "experience.cta.subtitle",
+        "value": "Tell us who you are and what moves you. We'll build an itinerary around the Ethiopia you've been imagining."
+      },
+      {
+        "key": "experience.cta.primary",
+        "value": "Start planning"
+      },
+      {
+        "key": "experience.cta.secondary",
+        "value": "Browse tours"
+      },
+      {
+        "key": "blog.eyebrow",
+        "value": "Stories"
+      },
+      {
+        "key": "blog.title",
+        "value": "Field notes from Ethiopia"
+      },
+      {
+        "key": "blog.readArticle",
+        "value": "Read article"
+      },
+      {
+        "key": "blog.p1.title",
+        "value": "Why Ethiopia has 13 months of sunshine"
+      },
+      {
+        "key": "blog.p1.excerpt",
+        "value": "Inside the Ge'ez calendar and what it means for travellers."
+      },
+      {
+        "key": "blog.p2.title",
+        "value": "The origin of coffee — a Kaldi tale"
+      },
+      {
+        "key": "blog.p2.excerpt",
+        "value": "Tracing the bean from a goatherd in Kaffa to the world's cups."
+      },
+      {
+        "key": "blog.p3.title",
+        "value": "A pilgrim's guide to Lalibela"
+      },
+      {
+        "key": "blog.p3.excerpt",
+        "value": "How to experience the rock-hewn churches respectfully."
+      },
+      {
+        "key": "explore.clearFilters",
+        "value": "Clear filters"
+      },
+      {
+        "key": "explore.eyebrow",
+        "value": "Interactive globe"
+      },
+      {
+        "key": "explore.title",
+        "value": "Explore Ethiopia"
+      },
+      {
+        "key": "explore.blurb",
+        "value": "Hover the red pins to see tour previews. Click to open the full itinerary."
+      },
+      {
+        "key": "explore.searchPlaceholder",
+        "value": "Search tours, regions…"
+      },
+      {
+        "key": "explore.search",
+        "value": "Search"
+      },
+      {
+        "key": "culture.b8.h",
+        "value": "Why Travel With Konijet"
+      },
+      {
+        "key": "culture.b8.p",
+        "value": "With Konijet Ethiopia, you get more than a trip — you get a real story. We help you find the true heart of this land, one friendly face and stunning view at a time."
+      },
+      {
+        "key": "dest.title",
+        "value": "Ethiopia Travel Guide"
+      },
+      {
+        "key": "dest.eyebrow",
+        "value": "Where to go"
+      },
+      {
+        "key": "dest.blurb",
+        "value": "Practical tips and vivid destinations across one extraordinary country."
+      },
+      {
+        "key": "dest.intro",
+        "value": "Ethiopia is a land of contrasts — UNESCO sites, vibrant cultures, dramatic landscapes and unforgettable rituals. From the highlands of the north to the tribal heartlands of the south, here is everything you need to plan your journey."
+      },
+      {
+        "key": "dest.addis.h",
+        "value": "Addis Ababa – The Gateway"
+      },
+      {
+        "key": "dest.addis.p",
+        "value": "Perched at 2,355m, Addis Ababa offers mild weather year-round and blends modern skyscrapers with deep tradition — coffee ceremonies, lively nightlife and the heart of African diplomacy."
+      },
+      {
+        "key": "dest.addis.b1",
+        "value": "National Museum — home to 'Lucy', the famous fossil"
+      },
+      {
+        "key": "dest.addis.b2",
+        "value": "Holy Trinity Cathedral — neo-baroque masterpiece"
+      },
+      {
+        "key": "dest.addis.b3",
+        "value": "Mount Entoto — panoramic views and historic churches"
+      },
+      {
+        "key": "dest.addis.b4",
+        "value": "Merkato — Africa's largest open-air market"
+      },
+      {
+        "key": "dest.addis.b5",
+        "value": "Best time: September to March"
+      },
+      {
+        "key": "dest.lalibela.h",
+        "value": "Lalibela – The Rock-Hewn Churches"
+      },
+      {
+        "key": "dest.lalibela.p",
+        "value": "Ethiopia's spiritual centre, famed for 12th-century churches carved from living stone. Pilgrims arrive in flowing white robes — most magical at sunrise during Genna and Timkat festivals."
+      },
+      {
+        "key": "dest.lalibela.b1",
+        "value": "Bete Giyorgis (St. George's) — iconic cross-shaped church"
+      }
+    ]
+  },
+  "tr": {
+    "name": "Turkish",
+    "totalKeys": 385,
+    "missingCount": 0,
+    "missingKeys": [],
+    "extraCount": 0,
+    "extraKeys": [],
+    "fallbackCount": 59,
+    "fallbacks": [
+      {
+        "key": "booking.whatsapp",
+        "value": "WhatsApp"
+      },
+      {
+        "key": "experience.immersive.e4.eyebrow",
+        "value": "Lalibela, Amhara"
+      },
+      {
+        "key": "experience.immersive.e4.tag",
+        "value": "Festival"
+      },
+      {
+        "key": "experience.testimonials.t1.name",
+        "value": "Astrid K."
+      },
+      {
+        "key": "experience.testimonials.t2.name",
+        "value": "James O."
+      },
+      {
+        "key": "experience.testimonials.t2.origin",
+        "value": "London"
+      },
+      {
+        "key": "experience.testimonials.t3.quote",
+        "value": "Attending Timkat in Gondar changed my understanding of what a festival can be. I felt like a guest, not a tourist."
+      },
+      {
+        "key": "experience.testimonials.t3.name",
+        "value": "Mireille D."
+      },
+      {
+        "key": "experience.testimonials.t3.origin",
+        "value": "Montreal"
+      },
+      {
+        "key": "experience.cta.eyebrow",
+        "value": "Ready to go?"
+      },
+      {
+        "key": "experience.cta.title",
+        "value": "Your Ethiopia is waiting"
+      },
+      {
+        "key": "experience.cta.subtitle",
+        "value": "Tell us who you are and what moves you. We'll build an itinerary around the Ethiopia you've been imagining."
+      },
+      {
+        "key": "experience.cta.primary",
+        "value": "Start planning"
+      },
+      {
+        "key": "experience.cta.secondary",
+        "value": "Browse tours"
+      },
+      {
+        "key": "blog.eyebrow",
+        "value": "Stories"
+      },
+      {
+        "key": "blog.title",
+        "value": "Field notes from Ethiopia"
+      },
+      {
+        "key": "blog.readArticle",
+        "value": "Read article"
+      },
+      {
+        "key": "blog.p1.title",
+        "value": "Why Ethiopia has 13 months of sunshine"
+      },
+      {
+        "key": "blog.p1.excerpt",
+        "value": "Inside the Ge'ez calendar and what it means for travellers."
+      },
+      {
+        "key": "blog.p2.title",
+        "value": "The origin of coffee — a Kaldi tale"
+      },
+      {
+        "key": "blog.p2.excerpt",
+        "value": "Tracing the bean from a goatherd in Kaffa to the world's cups."
+      },
+      {
+        "key": "blog.p3.title",
+        "value": "A pilgrim's guide to Lalibela"
+      },
+      {
+        "key": "blog.p3.excerpt",
+        "value": "How to experience the rock-hewn churches respectfully."
+      },
+      {
+        "key": "explore.clearFilters",
+        "value": "Clear filters"
+      },
+      {
+        "key": "explore.eyebrow",
+        "value": "Interactive globe"
+      },
+      {
+        "key": "explore.title",
+        "value": "Explore Ethiopia"
+      },
+      {
+        "key": "explore.blurb",
+        "value": "Hover the red pins to see tour previews. Click to open the full itinerary."
+      },
+      {
+        "key": "explore.searchPlaceholder",
+        "value": "Search tours, regions…"
+      },
+      {
+        "key": "explore.search",
+        "value": "Search"
+      },
+      {
+        "key": "culture.b1.p",
+        "value": "In Lalibela, whole churches were carved straight out of the living rock. These ancient sanctuaries are still active places of worship — walking through them is quiet, peaceful and feels like stepping into another world."
+      },
+      {
+        "key": "culture.b2.h",
+        "value": "Gondar – Ancient Castles"
+      },
+      {
+        "key": "culture.b2.p",
+        "value": "Often called Africa's Camelot, Gondar is home to the Fasil Ghebbi fortress, where royal stone castles still stand tall. The history here is rich and regal, capturing the imagination of every visitor."
+      },
+      {
+        "key": "culture.b3.h",
+        "value": "Axum – Spiritual Heritage"
+      },
+      {
+        "key": "culture.b3.p",
+        "value": "Axum's towering stelae and ancient stone monuments mark the heart of Ethiopian Orthodox Christianity and the legendary home of the Ark of the Covenant."
+      },
+      {
+        "key": "culture.b4.h",
+        "value": "Simien Mountains – Roof of Africa"
+      },
+      {
+        "key": "culture.b4.p",
+        "value": "Jagged peaks, dramatic escarpments and troops of gelada baboons — the Simien Mountains are nature's true masterpiece in northern Ethiopia."
+      },
+      {
+        "key": "culture.b5.h",
+        "value": "Danakil Depression – Otherworldly Landscape"
+      },
+      {
+        "key": "culture.b5.p",
+        "value": "One of the hottest places on Earth, Danakil features bright yellow sulfur springs, vast salt flats and active volcanoes. The land feels lunar — strange, beautiful and unforgettable."
+      },
+      {
+        "key": "culture.b6.h",
+        "value": "Omo Valley – Ancient Cultures"
+      },
+      {
+        "key": "culture.b6.p",
+        "value": "The Omo Valley is home to tribes with rich, living traditions — body painting, lip plates, bull-jumping ceremonies — practiced daily by people who have shaped this landscape for centuries."
+      },
+      {
+        "key": "culture.b7.h",
+        "value": "Harar – Walled City of Saints"
+      },
+      {
+        "key": "culture.b7.p",
+        "value": "A maze of alleyways and over 80 mosques, Harar ends each day with the famous hyena feeding ritual outside its ancient walls."
+      },
+      {
+        "key": "dest.lalibela.b2",
+        "value": "Asheton Maryam Monastery — sweeping mountain views"
+      },
+      {
+        "key": "dest.lalibela.b3",
+        "value": "Best time: January for Genna; October–March for dry weather"
+      },
+      {
+        "key": "dest.axum.h",
+        "value": "Axum – Ancient Kingdom"
+      },
+      {
+        "key": "dest.axum.p",
+        "value": "The legendary seat of the Queen of Sheba and the birthplace of Ethiopian Christianity. Towering stelae, royal tombs and the sacred Church of St. Mary of Zion."
+      },
+      {
+        "key": "dest.omo.h",
+        "value": "Omo Valley – Tribal Heartland"
+      },
+      {
+        "key": "dest.omo.p",
+        "value": "A living museum of cultural diversity — Mursi lip plates, Hamar bull-jumping, Karo body painting. Always ask permission before photographing and respect tribal traditions."
+      },
+      {
+        "key": "dest.danakil.h",
+        "value": "Danakil Depression – Extreme Adventure"
+      },
+      {
+        "key": "dest.danakil.p",
+        "value": "Surreal salt flats, lava flows and neon sulfur springs. Erta Ale's lava lake glows red at night and Dallol's pools fluoresce yellow and green — accessible only by 4WD convoy with experienced guides."
+      },
+      {
+        "key": "dest.bale.h",
+        "value": "Bale Mountains – Wildlife Paradise"
+      },
+      {
+        "key": "dest.bale.p",
+        "value": "Alpine meadows, the Harenna cloud forest and the world's rarest canid — the Ethiopian wolf — on the Sanetti Plateau."
+      },
+      {
+        "key": "plan.title",
+        "value": "Plan your trip"
+      },
+      {
+        "key": "plan.eyebrow",
+        "value": "Practical guide"
+      },
+      {
+        "key": "plan.blurb",
+        "value": "Everything you need: arrival, visas, packing, weather and money."
+      },
+      {
+        "key": "plan.arrival.h",
+        "value": "Getting Here"
+      },
+      {
+        "key": "plan.arrival.p",
+        "value": "Addis Ababa Bole International Airport (ADD) is Ethiopia's main gateway and one of Africa's leading aviation hubs — just 6 km from the city centre, with 15–20 minute transfers to most major hotels."
+      },
+      {
+        "key": "plan.arrival.b1",
+        "value": "Ethiopian Airlines connects 130+ international destinations"
+      },
+      {
+        "key": "weather.fahrenheit",
+        "value": "Fahrenheit"
+      }
+    ]
+  },
+  "nl": {
+    "name": "Dutch",
+    "totalKeys": 385,
+    "missingCount": 0,
+    "missingKeys": [],
+    "extraCount": 0,
+    "extraKeys": [],
+    "fallbackCount": 39,
+    "fallbacks": [
+      {
+        "key": "nav.contact",
+        "value": "Contact"
+      },
+      {
+        "key": "footer.privacy",
+        "value": "Privacy"
+      },
+      {
+        "key": "tour.status",
+        "value": "Status"
+      },
+      {
+        "key": "booking.whatsapp",
+        "value": "WhatsApp"
+      },
+      {
+        "key": "about.values.v1.title",
+        "value": "AUTHENTICITY"
+      },
+      {
+        "key": "about.values.v1.content",
+        "value": "We don't do generic tours. Every itinerary is crafted to give you real encounters with Ethiopian culture, cuisine, history, and nature — not a sanitized tourist version of it."
+      },
+      {
+        "key": "about.values.v2.title",
+        "value": "COMMUNITY FIRST"
+      },
+      {
+        "key": "about.values.v2.content",
+        "value": "We partner with local guides, family-run lodges, and community cooperatives. When you travel with us, your money supports Ethiopian families directly."
+      },
+      {
+        "key": "about.values.v3.title",
+        "value": "RESPONSIBLE TRAVEL"
+      },
+      {
+        "key": "about.values.v3.content",
+        "value": "We are committed to low-impact tourism. We educate our travelers on environmental protection, cultural respect, and sustainable practices that protect Ethiopia's heritage for future generations."
+      },
+      {
+        "key": "about.stats.s1.label",
+        "value": "Happy Travelers"
+      },
+      {
+        "key": "about.stats.s2.label",
+        "value": "Unique Destinations"
+      },
+      {
+        "key": "about.stats.s3.label",
+        "value": "Languages Spoken"
+      },
+      {
+        "key": "about.stats.s4.label",
+        "value": "Local Team"
+      },
+      {
+        "key": "about.whyEthiopia.title",
+        "value": "Why Ethiopia?"
+      },
+      {
+        "key": "about.whyEthiopia.content",
+        "value": "Ethiopia is unlike anywhere else on earth. It is the only African country never colonized. It has its own calendar (13 months of sunshine), its own alphabet (Ge'ez script), its own time system, and its own coffee ceremony that has been practiced for centuries."
+      },
+      {
+        "key": "experience.immersive.e4.eyebrow",
+        "value": "Lalibela, Amhara"
+      },
+      {
+        "key": "experience.immersive.e4.tag",
+        "value": "Festival"
+      },
+      {
+        "key": "experience.testimonials.t1.name",
+        "value": "Astrid K."
+      },
+      {
+        "key": "experience.testimonials.t2.name",
+        "value": "James O."
+      },
+      {
+        "key": "experience.testimonials.t3.name",
+        "value": "Mireille D."
+      },
+      {
+        "key": "experience.testimonials.t3.origin",
+        "value": "Montreal"
+      },
+      {
+        "key": "explore.inCategory",
+        "value": "In {{category}}"
+      },
+      {
+        "key": "plan.arrival.b2",
+        "value": "Other carriers: Emirates, Turkish, Qatar, Lufthansa, FlyDubai, EgyptAir"
+      },
+      {
+        "key": "plan.arrival.b3",
+        "value": "Domestic flights cover Lalibela, Gondar, Axum, Bahir Dar, Arba Minch, Jinka, Mekele"
+      },
+      {
+        "key": "plan.arrival.b4",
+        "value": "On arrival, your Konijet guide will meet you at arrivals with a name sign"
+      },
+      {
+        "key": "plan.visa.h",
+        "value": "Visa & Entry"
+      },
+      {
+        "key": "plan.visa.p",
+        "value": "Most international travellers can obtain an Ethiopian visa via e-Visa (recommended) at evisa.gov.et, or visa-on-arrival at Bole International Airport. Your passport must be valid for at least six months from entry."
+      },
+      {
+        "key": "plan.day.h",
+        "value": "Daily Schedule"
+      },
+      {
+        "key": "plan.day.p",
+        "value": "Most days involve 8–9 hours on the go — sights, lunch breaks, photo stops and drive time. A few days extend to 10+ hours. Days generally start between 7:30–8:30 and finish around 16:00–17:00."
+      },
+      {
+        "key": "plan.transport.h",
+        "value": "Transport"
+      },
+      {
+        "key": "plan.transport.p",
+        "value": "We use a private bus charter for the northern loop (Addis to Lalibela), domestic flights as stated in the itinerary, and air-conditioned 4WD Land Cruisers for off-road sections."
+      },
+      {
+        "key": "plan.weather.h",
+        "value": "Weather & Clothing"
+      },
+      {
+        "key": "plan.weather.p1",
+        "value": "Expect sunshine most days. The north stays comfortably warm; the south can reach 30°C+. Nights in the highlands can be cold — bring a jacket and light thermals."
+      },
+      {
+        "key": "plan.weather.p2",
+        "value": "The Danakil Depression is one of the hottest places on Earth. Trips run October–February, but daytime temperatures can still reach 40°C."
+      },
+      {
+        "key": "plan.weather.p3",
+        "value": "Dress is conservative. Comfortable walking shoes with ankle support are strongly recommended, plus a hat and sunscreen."
+      },
+      {
+        "key": "plan.money.h",
+        "value": "Money & Exchange"
+      },
+      {
+        "key": "weather.celsius",
+        "value": "Celsius"
+      },
+      {
+        "key": "weather.fahrenheit",
+        "value": "Fahrenheit"
+      }
+    ]
+  },
+  "pl": {
+    "name": "Polish",
+    "totalKeys": 385,
+    "missingCount": 0,
+    "missingKeys": [],
+    "extraCount": 0,
+    "extraKeys": [],
+    "fallbackCount": 210,
+    "fallbacks": [
+      {
+        "key": "footer.needHelp",
+        "value": "Need help?"
+      },
+      {
+        "key": "footer.callHours",
+        "value": "7 days · 8 AM – 8 PM EAT"
+      },
+      {
+        "key": "tour.region",
+        "value": "Region"
+      },
+      {
+        "key": "tour.status",
+        "value": "Status"
+      },
+      {
+        "key": "booking.whatsapp",
+        "value": "WhatsApp"
+      },
+      {
+        "key": "about.story.content",
+        "value": "Konijet Ethiopia was founded with one purpose: to show the world what Ethiopians already know — that this ancient land is one of the most breathtaking, culturally rich, and spiritually profound destinations on Earth.\n\nThe name \"Konijet\" (ቆጂት) means beautiful in Amharic. It is what we see every time we look at our country — beautiful mountains, beautiful people, beautiful history. We wanted to create a company worthy of that name.\n\nWe started as a small team of passionate Ethiopian guides and travel professionals who were tired of seeing Ethiopia overlooked on the world tourism map. Ethiopia is the cradle of humankind, the birthplace of coffee, home to one of the world's oldest Christian civilizations, and a land of extraordinary biodiversity. Yet it remains one of Africa's best-kept secrets. We are here to change that.\n\nToday, Konijet Ethiopia offers curated tour packages spanning the entire country — from the rock-hewn churches of Lalibela to the volcanic landscapes of the Danakil Depression, from the ancient obelisks of Axum to the tribal cultures of the Omo Valley, and from the wildlife of the Simien Mountains to the shores of Lake Tana."
+      },
+      {
+        "key": "about.mission.content",
+        "value": "To create transformative travel experiences that connect visitors to the authentic heart of Ethiopia, while supporting local communities and preserving the natural and cultural heritage of our nation."
+      },
+      {
+        "key": "about.cta.whatsapp",
+        "value": "Chat on WhatsApp"
+      },
+      {
+        "key": "about.values.title",
+        "value": "Our Values"
+      },
+      {
+        "key": "about.values.v1.title",
+        "value": "AUTHENTICITY"
+      },
+      {
+        "key": "about.values.v1.content",
+        "value": "We don't do generic tours. Every itinerary is crafted to give you real encounters with Ethiopian culture, cuisine, history, and nature — not a sanitized tourist version of it."
+      },
+      {
+        "key": "about.values.v2.title",
+        "value": "COMMUNITY FIRST"
+      },
+      {
+        "key": "about.values.v2.content",
+        "value": "We partner with local guides, family-run lodges, and community cooperatives. When you travel with us, your money supports Ethiopian families directly."
+      },
+      {
+        "key": "about.values.v3.title",
+        "value": "RESPONSIBLE TRAVEL"
+      },
+      {
+        "key": "about.values.v3.content",
+        "value": "We are committed to low-impact tourism. We educate our travelers on environmental protection, cultural respect, and sustainable practices that protect Ethiopia's heritage for future generations."
+      },
+      {
+        "key": "about.stats.s1.label",
+        "value": "Happy Travelers"
+      },
+      {
+        "key": "about.stats.s2.label",
+        "value": "Unique Destinations"
+      },
+      {
+        "key": "about.stats.s3.label",
+        "value": "Languages Spoken"
+      },
+      {
+        "key": "about.stats.s4.label",
+        "value": "Local Team"
+      },
+      {
+        "key": "about.whyEthiopia.title",
+        "value": "Why Ethiopia?"
+      },
+      {
+        "key": "about.whyEthiopia.content",
+        "value": "Ethiopia is unlike anywhere else on earth. It is the only African country never colonized. It has its own calendar (13 months of sunshine), its own alphabet (Ge'ez script), its own time system, and its own coffee ceremony that has been practiced for centuries."
+      },
+      {
+        "key": "about.whyEthiopia.footer",
+        "value": "When you visit Ethiopia, you are not just taking a holiday. You are stepping into human history."
+      },
+      {
+        "key": "privacy.title",
+        "value": "Privacy Policy"
+      },
+      {
+        "key": "privacy.lastUpdated",
+        "value": "Last Updated: January 1, 2025"
+      },
+      {
+        "key": "privacy.content",
+        "value": "Konijet Ethiopia Tourism is committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit konjetethiopia.com and use our services."
+      },
+      {
+        "key": "terms.title",
+        "value": "Terms of Service"
+      },
+      {
+        "key": "terms.lastUpdated",
+        "value": "Last Updated: January 1, 2025"
+      },
+      {
+        "key": "terms.content",
+        "value": "By accessing or using konjetethiopia.com and our services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree, please do not use this site."
+      },
+      {
+        "key": "experience.hero.eyebrow",
+        "value": "Deeper Journeys"
+      },
+      {
+        "key": "experience.hero.title",
+        "value": "Experience Ethiopia"
+      },
+      {
+        "key": "experience.hero.subtitle",
+        "value": "Cooking with families. Trekking with shepherds. Listening with elders. These are the moments that don't appear in guidebooks — and the only ones you'll still remember in twenty years."
+      },
+      {
+        "key": "experience.hero.ctaPrimary",
+        "value": "Browse all tours"
+      },
+      {
+        "key": "experience.hero.ctaSecondary",
+        "value": "Plan a custom trip"
+      },
+      {
+        "key": "experience.philosophy.eyebrow",
+        "value": "Our Philosophy"
+      },
+      {
+        "key": "experience.philosophy.title",
+        "value": "Slow down. Go deeper."
+      },
+      {
+        "key": "experience.philosophy.body",
+        "value": "Ethiopia is one of the oldest civilisations on Earth. It deserves more than a highlight reel. We build itineraries around real connection — with communities, landscapes and histories that will reconfigure how you see the world."
+      },
+      {
+        "key": "experience.pillars.liveWithLocals.title",
+        "value": "Live with Locals"
+      },
+      {
+        "key": "experience.pillars.liveWithLocals.body",
+        "value": "Sleep in family homes, join daily routines, and share meals made from scratch. Not a hotel. Not a tour group. A life."
+      },
+      {
+        "key": "experience.pillars.coffeeOrigin.title",
+        "value": "Coffee at Origin"
+      },
+      {
+        "key": "experience.pillars.coffeeOrigin.body",
+        "value": "Trace Ethiopia's wild coffee from forest to cup — harvest, wash, roast and brew alongside the farmers who grow it."
+      },
+      {
+        "key": "experience.pillars.guidedByNature.title",
+        "value": "Guided by Nature"
+      },
+      {
+        "key": "experience.pillars.guidedByNature.body",
+        "value": "Trek shepherd trails through the Simien escarpment, track wolves across the Bale plateau, and sleep under Africa's clearest skies."
+      },
+      {
+        "key": "experience.pillars.cookAndEat.title",
+        "value": "Cook & Eat"
+      },
+      {
+        "key": "experience.pillars.cookAndEat.body",
+        "value": "Hands-on injera making, spice market tours and home-kitchen dinners. Ethiopian cuisine as it is actually eaten."
+      },
+      {
+        "key": "experience.pillars.festivalAccess.title",
+        "value": "Festival Access"
+      },
+      {
+        "key": "experience.pillars.festivalAccess.body",
+        "value": "Join Timkat processions, Hamar bull-jumping and Meskel bonfires — not as a spectator, but as a welcomed guest."
+      },
+      {
+        "key": "experience.pillars.creativeTravel.title",
+        "value": "Creative Travel"
+      },
+      {
+        "key": "experience.pillars.creativeTravel.body",
+        "value": "Photography walks, textile workshops, and studio visits with Addis artists. Bring home more than photos."
+      },
+      {
+        "key": "experience.immersive.eyebrow",
+        "value": "Signature Moments"
+      },
+      {
+        "key": "experience.immersive.title",
+        "value": "Experiences that stay with you"
+      },
+      {
+        "key": "experience.immersive.viewAll",
+        "value": "View all tours"
+      },
+      {
+        "key": "experience.immersive.e1.eyebrow",
+        "value": "South Omo Valley"
+      },
+      {
+        "key": "experience.immersive.e1.title",
+        "value": "A Morning with the Hamar"
+      },
+      {
+        "key": "experience.immersive.e1.body",
+        "value": "Arrive at a Hamar settlement before dawn. Watch cattle leave the boma, share black tea and sit in silence as the village wakes. Your guide — who grew up here — translates not just words but meaning."
+      },
+      {
+        "key": "experience.immersive.e1.tag",
+        "value": "Cultural"
+      },
+      {
+        "key": "experience.immersive.e1.duration",
+        "value": "Full day"
+      },
+      {
+        "key": "experience.immersive.e2.eyebrow",
+        "value": "Kaffa Forest, Jimma"
+      },
+      {
+        "key": "experience.immersive.e2.title",
+        "value": "The Wild Coffee Forest"
+      },
+      {
+        "key": "experience.immersive.e2.body",
+        "value": "Walk into the highland forest where Coffea arabica grows wild. Harvest cherries from trees that seed themselves. Sit with a farmer's family for a three-round coffee ceremony as rain falls on the canopy above."
+      },
+      {
+        "key": "experience.immersive.e2.tag",
+        "value": "Coffee"
+      },
+      {
+        "key": "experience.immersive.e2.duration",
+        "value": "3 days"
+      },
+      {
+        "key": "experience.immersive.e3.eyebrow",
+        "value": "Danakil Depression"
+      },
+      {
+        "key": "experience.immersive.e3.title",
+        "value": "The Edge of the World"
+      },
+      {
+        "key": "experience.immersive.e3.body",
+        "value": "Descend to 120m below sea level and watch sulphur springs bubble in technicolour. Sleep beside Afar salt miners who have worked this landscape for a thousand years. The most extreme landscape on Earth — with the warmest hosts."
+      },
+      {
+        "key": "experience.immersive.e3.tag",
+        "value": "Adventure"
+      },
+      {
+        "key": "experience.immersive.e3.duration",
+        "value": "4 days"
+      },
+      {
+        "key": "experience.immersive.e4.eyebrow",
+        "value": "Lalibela, Amhara"
+      },
+      {
+        "key": "experience.immersive.e4.title",
+        "value": "Midnight Mass at Bete Maryam"
+      },
+      {
+        "key": "experience.immersive.e4.body",
+        "value": "Stand in the carved rock courtyard at 2 am on Ethiopian Christmas Eve. A priest chants in Ge'ez from memory. Thousands of white-robed pilgrims hold candles. No other experience on earth is quite like this."
+      },
+      {
+        "key": "experience.immersive.e4.tag",
+        "value": "Festival"
+      },
+      {
+        "key": "experience.immersive.e4.duration",
+        "value": "8 days"
+      },
+      {
+        "key": "experience.immersive.exploreTour",
+        "value": "Explore this tour"
+      },
+      {
+        "key": "experience.testimonials.eyebrow",
+        "value": "From Travellers"
+      },
+      {
+        "key": "experience.testimonials.title",
+        "value": "What people say"
+      },
+      {
+        "key": "experience.testimonials.t1.quote",
+        "value": "The coffee forest walk in Kaffa was the single best day of my entire year of travelling. Konijet's guide knew every family on the path."
+      },
+      {
+        "key": "experience.testimonials.t1.name",
+        "value": "Astrid K."
+      },
+      {
+        "key": "experience.testimonials.t1.origin",
+        "value": "Copenhagen"
+      },
+      {
+        "key": "experience.testimonials.t2.quote",
+        "value": "I've done safaris in Kenya and Tanzania. The Omo Valley with Konijet is a completely different category — quieter, more personal, more real."
+      },
+      {
+        "key": "experience.testimonials.t2.name",
+        "value": "James O."
+      },
+      {
+        "key": "experience.testimonials.t2.origin",
+        "value": "London"
+      },
+      {
+        "key": "experience.testimonials.t3.quote",
+        "value": "Attending Timkat in Gondar changed my understanding of what a festival can be. I felt like a guest, not a tourist."
+      },
+      {
+        "key": "experience.testimonials.t3.name",
+        "value": "Mireille D."
+      },
+      {
+        "key": "experience.testimonials.t3.origin",
+        "value": "Montreal"
+      },
+      {
+        "key": "experience.cta.eyebrow",
+        "value": "Ready to go?"
+      },
+      {
+        "key": "experience.cta.title",
+        "value": "Your Ethiopia is waiting"
+      },
+      {
+        "key": "experience.cta.subtitle",
+        "value": "Tell us who you are and what moves you. We'll build an itinerary around the Ethiopia you've been imagining."
+      },
+      {
+        "key": "experience.cta.primary",
+        "value": "Start planning"
+      },
+      {
+        "key": "experience.cta.secondary",
+        "value": "Browse tours"
+      },
+      {
+        "key": "blog.eyebrow",
+        "value": "Stories"
+      },
+      {
+        "key": "blog.title",
+        "value": "Field notes from Ethiopia"
+      },
+      {
+        "key": "blog.readArticle",
+        "value": "Read article"
+      },
+      {
+        "key": "blog.p1.title",
+        "value": "Why Ethiopia has 13 months of sunshine"
+      },
+      {
+        "key": "blog.p1.excerpt",
+        "value": "Inside the Ge'ez calendar and what it means for travellers."
+      },
+      {
+        "key": "blog.p2.title",
+        "value": "The origin of coffee — a Kaldi tale"
+      },
+      {
+        "key": "blog.p2.excerpt",
+        "value": "Tracing the bean from a goatherd in Kaffa to the world's cups."
+      },
+      {
+        "key": "blog.p3.title",
+        "value": "A pilgrim's guide to Lalibela"
+      },
+      {
+        "key": "blog.p3.excerpt",
+        "value": "How to experience the rock-hewn churches respectfully."
+      },
+      {
+        "key": "explore.clearFilters",
+        "value": "Clear filters"
+      },
+      {
+        "key": "explore.eyebrow",
+        "value": "Interactive globe"
+      },
+      {
+        "key": "explore.title",
+        "value": "Explore Ethiopia"
+      },
+      {
+        "key": "explore.blurb",
+        "value": "Hover the red pins to see tour previews. Click to open the full itinerary."
+      },
+      {
+        "key": "explore.searchPlaceholder",
+        "value": "Search tours, regions…"
+      },
+      {
+        "key": "explore.search",
+        "value": "Search"
+      },
+      {
+        "key": "explore.toursCount",
+        "value": "{{count}} tour"
+      },
+      {
+        "key": "explore.toursCount_plural",
+        "value": "{{count}} tours"
+      },
+      {
+        "key": "explore.inCategory",
+        "value": "In {{category}}"
+      },
+      {
+        "key": "explore.acrossAll",
+        "value": "Across all categories"
+      },
+      {
+        "key": "explore.matching",
+        "value": "matching \"{{query}}\""
+      },
+      {
+        "key": "explore.noTours",
+        "value": "No tours match."
+      },
+      {
+        "key": "explore.clearAll",
+        "value": "Clear filters"
+      },
+      {
+        "key": "toursPage.eyebrow",
+        "value": "Choose your journey"
+      },
+      {
+        "key": "toursPage.title",
+        "value": "Ethiopia tour categories"
+      },
+      {
+        "key": "toursPage.subtitle",
+        "value": "Pick a category to see every itinerary inside it on the interactive Explore map."
+      },
+      {
+        "key": "toursPage.tourCount",
+        "value": "{{count}} tours"
+      },
+      {
+        "key": "toursPage.exploreTours",
+        "value": "Explore tours"
+      },
+      {
+        "key": "tourDetail.aboutTrip",
+        "value": "About this trip"
+      },
+      {
+        "key": "tourDetail.highlights",
+        "value": "Highlights"
+      },
+      {
+        "key": "tourDetail.itinerary",
+        "value": "Day-by-day itinerary"
+      },
+      {
+        "key": "tourDetail.included",
+        "value": "What's included"
+      },
+      {
+        "key": "tourDetail.notIncluded",
+        "value": "Not included"
+      },
+      {
+        "key": "tourDetail.perPersonTwin",
+        "value": "per person, twin share"
+      },
+      {
+        "key": "culture.title",
+        "value": "Highlights of Ethiopia"
+      },
+      {
+        "key": "culture.eyebrow",
+        "value": "Living heritage"
+      },
+      {
+        "key": "culture.blurb",
+        "value": "Ancient faith, vibrant tribes and the rhythm of 80+ languages."
+      },
+      {
+        "key": "culture.intro",
+        "value": "Ethiopia is a nation of incredible destinations — high mountains, deep valleys and a very long, layered history. Each place tells a different story, and together they form one of Africa's most distinctive cultural journeys."
+      },
+      {
+        "key": "culture.b1.h",
+        "value": "Lalibela – Churches Cut from Stone"
+      },
+      {
+        "key": "culture.b1.p",
+        "value": "In Lalibela, whole churches were carved straight out of the living rock. These ancient sanctuaries are still active places of worship — walking through them is quiet, peaceful and feels like stepping into another world."
+      },
+      {
+        "key": "culture.b2.h",
+        "value": "Gondar – Ancient Castles"
+      },
+      {
+        "key": "culture.b2.p",
+        "value": "Often called Africa's Camelot, Gondar is home to the Fasil Ghebbi fortress, where royal stone castles still stand tall. The history here is rich and regal, capturing the imagination of every visitor."
+      },
+      {
+        "key": "culture.b3.h",
+        "value": "Axum – Spiritual Heritage"
+      },
+      {
+        "key": "culture.b3.p",
+        "value": "Axum's towering stelae and ancient stone monuments mark the heart of Ethiopian Orthodox Christianity and the legendary home of the Ark of the Covenant."
+      },
+      {
+        "key": "culture.b4.h",
+        "value": "Simien Mountains – Roof of Africa"
+      },
+      {
+        "key": "culture.b4.p",
+        "value": "Jagged peaks, dramatic escarpments and troops of gelada baboons — the Simien Mountains are nature's true masterpiece in northern Ethiopia."
+      },
+      {
+        "key": "culture.b5.h",
+        "value": "Danakil Depression – Otherworldly Landscape"
+      },
+      {
+        "key": "culture.b5.p",
+        "value": "One of the hottest places on Earth, Danakil features bright yellow sulfur springs, vast salt flats and active volcanoes. The land feels lunar — strange, beautiful and unforgettable."
+      },
+      {
+        "key": "culture.b6.h",
+        "value": "Omo Valley – Ancient Cultures"
+      },
+      {
+        "key": "culture.b6.p",
+        "value": "The Omo Valley is home to tribes with rich, living traditions — body painting, lip plates, bull-jumping ceremonies — practiced daily by people who have shaped this landscape for centuries."
+      },
+      {
+        "key": "culture.b7.h",
+        "value": "Harar – Walled City of Saints"
+      },
+      {
+        "key": "culture.b7.p",
+        "value": "A maze of alleyways and over 80 mosques, Harar ends each day with the famous hyena feeding ritual outside its ancient walls."
+      },
+      {
+        "key": "culture.b8.h",
+        "value": "Why Travel With Konijet"
+      },
+      {
+        "key": "culture.b8.p",
+        "value": "With Konijet Ethiopia, you get more than a trip — you get a real story. We help you find the true heart of this land, one friendly face and stunning view at a time."
+      },
+      {
+        "key": "dest.title",
+        "value": "Ethiopia Travel Guide"
+      },
+      {
+        "key": "dest.eyebrow",
+        "value": "Where to go"
+      },
+      {
+        "key": "dest.blurb",
+        "value": "Practical tips and vivid destinations across one extraordinary country."
+      },
+      {
+        "key": "dest.intro",
+        "value": "Ethiopia is a land of contrasts — UNESCO sites, vibrant cultures, dramatic landscapes and unforgettable rituals. From the highlands of the north to the tribal heartlands of the south, here is everything you need to plan your journey."
+      },
+      {
+        "key": "dest.addis.h",
+        "value": "Addis Ababa – The Gateway"
+      },
+      {
+        "key": "dest.addis.p",
+        "value": "Perched at 2,355m, Addis Ababa offers mild weather year-round and blends modern skyscrapers with deep tradition — coffee ceremonies, lively nightlife and the heart of African diplomacy."
+      },
+      {
+        "key": "dest.addis.b1",
+        "value": "National Museum — home to 'Lucy', the famous fossil"
+      },
+      {
+        "key": "dest.addis.b2",
+        "value": "Holy Trinity Cathedral — neo-baroque masterpiece"
+      },
+      {
+        "key": "dest.addis.b3",
+        "value": "Mount Entoto — panoramic views and historic churches"
+      },
+      {
+        "key": "dest.addis.b4",
+        "value": "Merkato — Africa's largest open-air market"
+      },
+      {
+        "key": "dest.addis.b5",
+        "value": "Best time: September to March"
+      },
+      {
+        "key": "dest.lalibela.h",
+        "value": "Lalibela – The Rock-Hewn Churches"
+      },
+      {
+        "key": "dest.lalibela.p",
+        "value": "Ethiopia's spiritual centre, famed for 12th-century churches carved from living stone. Pilgrims arrive in flowing white robes — most magical at sunrise during Genna and Timkat festivals."
+      },
+      {
+        "key": "dest.lalibela.b1",
+        "value": "Bete Giyorgis (St. George's) — iconic cross-shaped church"
+      },
+      {
+        "key": "dest.lalibela.b2",
+        "value": "Asheton Maryam Monastery — sweeping mountain views"
+      },
+      {
+        "key": "dest.lalibela.b3",
+        "value": "Best time: January for Genna; October–March for dry weather"
+      },
+      {
+        "key": "dest.axum.h",
+        "value": "Axum – Ancient Kingdom"
+      },
+      {
+        "key": "dest.axum.p",
+        "value": "The legendary seat of the Queen of Sheba and the birthplace of Ethiopian Christianity. Towering stelae, royal tombs and the sacred Church of St. Mary of Zion."
+      },
+      {
+        "key": "dest.omo.h",
+        "value": "Omo Valley – Tribal Heartland"
+      },
+      {
+        "key": "dest.omo.p",
+        "value": "A living museum of cultural diversity — Mursi lip plates, Hamar bull-jumping, Karo body painting. Always ask permission before photographing and respect tribal traditions."
+      },
+      {
+        "key": "dest.danakil.h",
+        "value": "Danakil Depression – Extreme Adventure"
+      },
+      {
+        "key": "dest.danakil.p",
+        "value": "Surreal salt flats, lava flows and neon sulfur springs. Erta Ale's lava lake glows red at night and Dallol's pools fluoresce yellow and green — accessible only by 4WD convoy with experienced guides."
+      },
+      {
+        "key": "dest.bale.h",
+        "value": "Bale Mountains – Wildlife Paradise"
+      },
+      {
+        "key": "dest.bale.p",
+        "value": "Alpine meadows, the Harenna cloud forest and the world's rarest canid — the Ethiopian wolf — on the Sanetti Plateau."
+      },
+      {
+        "key": "plan.title",
+        "value": "Plan your trip"
+      },
+      {
+        "key": "plan.eyebrow",
+        "value": "Practical guide"
+      },
+      {
+        "key": "plan.blurb",
+        "value": "Everything you need: arrival, visas, packing, weather and money."
+      },
+      {
+        "key": "plan.arrival.h",
+        "value": "Getting Here"
+      },
+      {
+        "key": "plan.arrival.p",
+        "value": "Addis Ababa Bole International Airport (ADD) is Ethiopia's main gateway and one of Africa's leading aviation hubs — just 6 km from the city centre, with 15–20 minute transfers to most major hotels."
+      },
+      {
+        "key": "plan.arrival.b1",
+        "value": "Ethiopian Airlines connects 130+ international destinations"
+      },
+      {
+        "key": "plan.arrival.b2",
+        "value": "Other carriers: Emirates, Turkish, Qatar, Lufthansa, FlyDubai, EgyptAir"
+      },
+      {
+        "key": "plan.arrival.b3",
+        "value": "Domestic flights cover Lalibela, Gondar, Axum, Bahir Dar, Arba Minch, Jinka, Mekele"
+      },
+      {
+        "key": "plan.arrival.b4",
+        "value": "On arrival, your Konijet guide will meet you at arrivals with a name sign"
+      },
+      {
+        "key": "plan.visa.h",
+        "value": "Visa & Entry"
+      },
+      {
+        "key": "plan.visa.p",
+        "value": "Most international travellers can obtain an Ethiopian visa via e-Visa (recommended) at evisa.gov.et, or visa-on-arrival at Bole International Airport. Your passport must be valid for at least six months from entry."
+      },
+      {
+        "key": "plan.day.h",
+        "value": "Daily Schedule"
+      },
+      {
+        "key": "plan.day.p",
+        "value": "Most days involve 8–9 hours on the go — sights, lunch breaks, photo stops and drive time. A few days extend to 10+ hours. Days generally start between 7:30–8:30 and finish around 16:00–17:00."
+      },
+      {
+        "key": "plan.transport.h",
+        "value": "Transport"
+      },
+      {
+        "key": "plan.transport.p",
+        "value": "We use a private bus charter for the northern loop (Addis to Lalibela), domestic flights as stated in the itinerary, and air-conditioned 4WD Land Cruisers for off-road sections."
+      },
+      {
+        "key": "plan.weather.h",
+        "value": "Weather & Clothing"
+      },
+      {
+        "key": "plan.weather.p1",
+        "value": "Expect sunshine most days. The north stays comfortably warm; the south can reach 30°C+. Nights in the highlands can be cold — bring a jacket and light thermals."
+      },
+      {
+        "key": "plan.weather.p2",
+        "value": "The Danakil Depression is one of the hottest places on Earth. Trips run October–February, but daytime temperatures can still reach 40°C."
+      },
+      {
+        "key": "plan.weather.p3",
+        "value": "Dress is conservative. Comfortable walking shoes with ankle support are strongly recommended, plus a hat and sunscreen."
+      },
+      {
+        "key": "plan.money.h",
+        "value": "Money & Exchange"
+      },
+      {
+        "key": "plan.money.p",
+        "value": "Local currency is the Ethiopian Birr (ETB). Credit cards are accepted in major hotels but limited elsewhere. ATMs are available in major towns. Bring USD, EUR or GBP cash in high-denomination notes (post-1999, undamaged)."
+      },
+      {
+        "key": "plan.food.p",
+        "value": "The national dish is injera — a circular fermented teff pancake — served with spiced meats, vegetables and sauces seasoned with berbere. Vegetarians should try 'fasting food', a colourful spread of salads and vegetable stews."
+      },
+      {
+        "key": "plan.stay.h",
+        "value": "Where You'll Stay"
+      },
+      {
+        "key": "plan.stay.p",
+        "value": "Konijet Ethiopia carefully selects high-quality hotels, resorts and eco-lodges across the country. In Addis we partner with Sheraton, Hyatt Regency, Ethiopian Skylight, Hilton, Radisson Blu and Golden Tulip. In remote regions, accommodation is simpler but always clean and welcoming."
+      },
+      {
+        "key": "contactPage.eyebrow",
+        "value": "Get in touch"
+      },
+      {
+        "key": "contactPage.title",
+        "value": "Plan your Ethiopia journey"
+      },
+      {
+        "key": "contactPage.subtitle",
+        "value": "Tell us when you'd like to travel, who you're travelling with and what you dream of seeing. We reply within 24 hours."
+      },
+      {
+        "key": "contactPage.nameLabel",
+        "value": "Your name"
+      },
+      {
+        "key": "contactPage.emailLabel",
+        "value": "Email"
+      },
+      {
+        "key": "contactPage.phoneLabel",
+        "value": "Phone (optional)"
+      },
+      {
+        "key": "contactPage.messageLabel",
+        "value": "Tell us about your dream trip"
+      },
+      {
+        "key": "contactPage.submit",
+        "value": "Send message"
+      },
+      {
+        "key": "contactPage.submitting",
+        "value": "Sending..."
+      },
+      {
+        "key": "contactPage.successMsg",
+        "value": "Message sent — we'll be in touch within 24 hours."
+      },
+      {
+        "key": "notFound.title",
+        "value": "Page not found"
+      },
+      {
+        "key": "notFound.subtitle",
+        "value": "The page you're looking for doesn't exist or has been moved."
+      },
+      {
+        "key": "notFound.home",
+        "value": "Go home"
+      },
+      {
+        "key": "weather.title",
+        "value": "Weather in"
+      },
+      {
+        "key": "weather.unavailable",
+        "value": "Weather temporarily unavailable."
+      },
+      {
+        "key": "weather.loading",
+        "value": "Loading weather…"
+      },
+      {
+        "key": "weather.celsius",
+        "value": "Celsius"
+      },
+      {
+        "key": "weather.fahrenheit",
+        "value": "Fahrenheit"
+      },
+      {
+        "key": "weather.sunrise",
+        "value": "Sunrise"
+      },
+      {
+        "key": "weather.sunset",
+        "value": "Sunset"
+      },
+      {
+        "key": "weather.humidity",
+        "value": "Humidity"
+      }
+    ]
+  }
+}

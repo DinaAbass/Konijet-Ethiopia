@@ -1,9 +1,11 @@
+"use client";
+
 import { ContentPage } from "@/components/ContentPage";
 import { useTranslation } from "react-i18next";
-import hero from "@/assets/dest-bale.jpg";
-import city from "@/assets/cat-city.jpg";
-import simien from "@/assets/hero-ethiopia.jpg";
-import coffee from "@/assets/culture-coffee.jpg";
+const hero = "/img/dest-bale.jpg";
+const city = "/img/cat-city.webp";
+const simien = "/img/hero-ethiopia.jpg";
+const coffee = "/img/culture-coffee.jpg";
 
 const Planning = () => {
   const { t } = useTranslation();
@@ -21,7 +23,7 @@ const Planning = () => {
             t("plan.arrival.b1", "Ethiopian Airlines connects 130+ international destinations"),
             t("plan.arrival.b2", "Other carriers: Emirates, Turkish, Qatar, Lufthansa, FlyDubai, EgyptAir"),
             t("plan.arrival.b3", "Domestic flights cover Lalibela, Gondar, Axum, Bahir Dar, Arba Minch, Jinka, Mekele"),
-            t("plan.arrival.b4", "On arrival, your Konjit guide will meet you at arrivals with a name sign"),
+            t("plan.arrival.b4", "On arrival, your Konijet guide will meet you at arrivals with a name sign"),
           ],
           image: city,
         },
@@ -57,7 +59,7 @@ const Planning = () => {
         },
         {
           heading: t("plan.stay.h", "Where You'll Stay"),
-          body: [t("plan.stay.p", "Konjit Ethiopia carefully selects high-quality hotels, resorts and eco-lodges across the country. In Addis we partner with Sheraton, Hyatt Regency, Ethiopian Skylight, Hilton, Radisson Blu and Golden Tulip. In remote regions, accommodation is simpler but always clean and welcoming.")],
+          body: [t("plan.stay.p", "Konijet Ethiopia carefully selects high-quality hotels, resorts and eco-lodges across the country. In Addis we partner with Sheraton, Hyatt Regency, Ethiopian Skylight, Hilton, Radisson Blu and Golden Tulip. In remote regions, accommodation is simpler but always clean and welcoming.")],
         },
       ]}
     />

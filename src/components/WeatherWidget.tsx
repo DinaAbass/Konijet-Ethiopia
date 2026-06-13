@@ -1,5 +1,8 @@
+"use client";
+
 import { useEffect, useState } from "react";
-import { Sun, Cloud, CloudRain, CloudSnow, CloudLightning, CloudDrizzle, Wind } from "lucide-react";
+import { Sun, Cloud, CloudRain, CloudSnow, CloudLightning, CloudDrizzle } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 type Weather = {
   temp: number;
@@ -29,15 +32,29 @@ const iconFor = (code: string) => {
   return Cloud;
 };
 
+// Map i18n codes to OpenWeather lang param. Amharic not supported → fallback to en.
+const OW_LANG_MAP: Record<string, string> = {
+  en: "en", am: "en", ar: "ar", zh: "zh_cn",
+  es: "es", fr: "fr", pt: "pt", it: "it",
+  ru: "ru", tr: "tr", nl: "nl", pl: "pl",
+};
+
 export const WeatherWidget = ({ city = "Addis Ababa" }: { city?: string }) => {
+  const { t, i18n } = useTranslation();
   const [w, setW] = useState<Weather | null>(null);
   const [unit, setUnit] = useState<"C" | "F">("C");
   const [err, setErr] = useState(false);
-  const apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY;
+  const apiKey = process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY;
+
+  const lang = OW_LANG_MAP[i18n.language] ?? "en";
 
   useEffect(() => {
+    setW(null);
+    setErr(false);
     if (!apiKey) { setErr(true); return; }
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)},ET&units=metric&appid=${apiKey}`)
+    fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)},ET&units=metric&lang=${lang}&appid=${apiKey}`
+    )
       .then(r => r.ok ? r.json() : Promise.reject(r.status))
       .then(d => setW({
         temp: d.main.temp,
@@ -52,13 +69,13 @@ export const WeatherWidget = ({ city = "Addis Ababa" }: { city?: string }) => {
         windKmh: Math.round((d.wind.speed ?? 0) * 3.6),
       }))
       .catch(() => setErr(true));
-  }, [city, apiKey]);
+  }, [city, apiKey, lang]);
 
   if (err || !w) {
     return (
       <section className="container-page py-6">
         <div className="rounded-2xl bg-muted/40 px-6 py-8 text-sm text-muted-foreground">
-          {err ? "Weather temporarily unavailable." : "Loading weather…"}
+          {err ? t("weather.unavailable", "Weather temporarily unavailable.") : t("weather.loading", "Loading weather…")}
         </div>
       </section>
     );
@@ -70,15 +87,21 @@ export const WeatherWidget = ({ city = "Addis Ababa" }: { city?: string }) => {
   return (
     <section className="container-page py-6">
       <div className="rounded-2xl bg-muted/30 px-5 md:px-8 py-6 border-b-4 border-secondary/60">
-        <h3 className="font-display text-xl text-primary mb-4">Weather in {city}</h3>
+        <h3 className="font-display text-xl text-primary mb-4">
+          {t("weather.title", "Weather in")} {t("cities." + city, { defaultValue: city })}
+        </h3>
         <div className="flex flex-wrap items-center gap-x-10 gap-y-4">
           <div className="flex items-center gap-4">
             <div>
               <div className="text-5xl font-light text-foreground">{toUnit(w.temp)}°</div>
               <div className="text-xs text-muted-foreground mt-1">
-                <button onClick={() => setUnit("C")} className={unit === "C" ? "text-foreground font-medium" : "hover:text-primary"}>Celsius</button>
+                <button onClick={() => setUnit("C")} className={unit === "C" ? "text-foreground font-medium" : "hover:text-primary"}>
+                  {t("weather.celsius", "Celsius")}
+                </button>
                 <span className="mx-2">·</span>
-                <button onClick={() => setUnit("F")} className={unit === "F" ? "text-foreground font-medium" : "text-secondary hover:underline"}>Fahrenheit</button>
+                <button onClick={() => setUnit("F")} className={unit === "F" ? "text-foreground font-medium" : "text-secondary hover:underline"}>
+                  {t("weather.fahrenheit", "Fahrenheit")}
+                </button>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -87,12 +110,12 @@ export const WeatherWidget = ({ city = "Addis Ababa" }: { city?: string }) => {
             </div>
           </div>
           <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm ml-auto">
-            <Stat label="Sunrise" value={w.sunrise} />
-            <Stat label="Sunset" value={w.sunset} />
-            <Stat label="Low" value={`${toUnit(w.tempMin)}°`} />
-            <Stat label="High" value={`${toUnit(w.tempMax)}°`} />
-            <Stat label="Humidity" value={`${w.humidity}%`} />
-            <Stat label="Wind" value={`${w.windKmh} km/h`} />
+            <Stat label={t("weather.sunrise", "Sunrise")} value={w.sunrise} />
+            <Stat label={t("weather.sunset", "Sunset")} value={w.sunset} />
+            <Stat label={t("weather.low", "Low")} value={`${toUnit(w.tempMin)}°`} />
+            <Stat label={t("weather.high", "High")} value={`${toUnit(w.tempMax)}°`} />
+            <Stat label={t("weather.humidity", "Humidity")} value={`${w.humidity}%`} />
+            <Stat label={t("weather.wind", "Wind")} value={`${w.windKmh} km/h`} />
           </div>
         </div>
       </div>

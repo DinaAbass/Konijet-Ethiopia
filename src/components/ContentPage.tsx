@@ -1,4 +1,6 @@
-import { Helmet } from "react-helmet-async";
+"use client";
+
+import Head from "next/head";
 import { useTranslation } from "react-i18next";
 
 export interface ContentBlock {
@@ -19,13 +21,13 @@ interface Props {
 
 export const ContentPage = ({ title, eyebrow, blurb, heroImage, intro, blocks }: Props) => {
   const { i18n } = useTranslation();
-  const isRTL = i18n.dir() === "rtl";
+  const isRTL = i18n.language === "ar" || i18n.dir?.() === "rtl";
   return (
     <>
-      <Helmet>
-        <title>{title} · Konjit Ethiopia</title>
+      <Head>
+        <title>{title} · Konijet Ethiopia</title>
         <meta name="description" content={blurb} />
-      </Helmet>
+      </Head>
 
       <section className="container-page pt-6">
         <div className="relative overflow-hidden rounded-[2.5rem] curve-card-tr">
@@ -47,7 +49,7 @@ export const ContentPage = ({ title, eyebrow, blurb, heroImage, intro, blocks }:
         </section>
       )}
 
-      <section className="container-page pb-20 space-y-16">
+      <section className="container-page pt-4 pb-20 space-y-16">
         {blocks.map((b, i) => {
           const flip = isRTL ? i % 2 === 1 : i % 2 === 0;
           return (
