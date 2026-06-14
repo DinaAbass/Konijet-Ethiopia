@@ -1,6 +1,5 @@
 "use client";
 
-import Script from "next/script";
 import { useEffect, useState } from "react";
 
 // ── Consent helper ──────────────────────────────────────────────────────────
@@ -24,45 +23,6 @@ function readMarketing(): boolean {
   } catch {
     return false;
   }
-}
-
-/**
- * GoogleAdSense
- * Loads the AdSense bootstrap script **only** when:
- *   - NEXT_PUBLIC_GOOGLE_ADSENSE_ID is set, and
- *   - The user has accepted marketing cookies (GDPR / CCPA compliance).
- *
- * Listens for the `konjit:consentUpdate` event emitted by CookieConsent.tsx
- * so ads load immediately after the user clicks "Accept All".
- */
-export function GoogleAdSense() {
-  const id = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID;
-  const [allowed, setAllowed] = useState(false);
-
-  useEffect(() => {
-    // Check existing consent on mount
-    setAllowed(readMarketing());
-
-    // React to consent changes in the same tab
-    const handler = (e: Event) => {
-      const detail = (e as CustomEvent<ConsentPreferences>).detail;
-      setAllowed(detail.marketing === true);
-    };
-    window.addEventListener("konjit:consentUpdate", handler);
-    return () => window.removeEventListener("konjit:consentUpdate", handler);
-  }, []);
-
-  if (!id || !allowed) return null;
-
-  return (
-    <Script
-      id="google-adsense"
-      async
-      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${id}`}
-      crossOrigin="anonymous"
-      strategy="afterInteractive"
-    />
-  );
 }
 
 interface AdBannerProps {
