@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Fraunces } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
-import Script from "next/script";
 import { CookieConsent } from "@/components/CookieConsent";
 
 const inter = Inter({
@@ -39,19 +38,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
-      <body>
-        {/* Google AdSense bootstrap — loaded here (server-rendered) so
-            Google's crawler can find it for site verification. Ad units
-            (<AdBanner />) still respect the marketing cookie choice. */}
+      <head>
+        {/* Google AdSense verification script — plain <script> tag in <head>
+            so Google's crawler finds it for site verification (AdSense requires
+            the snippet between <head></head> tags). Ad units via <AdBanner />
+            still respect the marketing cookie consent. */}
         {process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID ? (
-          <Script
-            id="google-adsense"
+          <script
             async
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID}`}
             crossOrigin="anonymous"
-            strategy="beforeInteractive"
           />
         ) : null}
+      </head>
+      <body>
         <Providers>
           {children}
           <CookieConsent />
