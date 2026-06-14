@@ -9,6 +9,10 @@ interface BlogDetailPageProps {
   params: Promise<{ slug: string }>;
 }
 
+// Allow dynamic slug resolution so new .mdx blog posts pushed by the n8n
+// workflow are server-rendered on first request instead of 404'ing.
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map((post) => ({ slug: post.slug }));
