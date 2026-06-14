@@ -3,12 +3,19 @@ import { BookOpen } from "lucide-react";
 import { getAllPosts } from "@/lib/blog-posts";
 import { SiteLayout } from "@/components/SiteLayout";
 import { AdBanner } from "@/components/AdSense";
+import Script from "next/script";
 
 export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
     <SiteLayout>
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6775298130218510"
+        crossOrigin="anonymous"
+        strategy="afterInteractive"
+      />
       <section className="container-page py-16">
         <span className="text-xs uppercase tracking-widest text-secondary font-bold">
           Blog

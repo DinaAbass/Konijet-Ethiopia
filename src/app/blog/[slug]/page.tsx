@@ -5,6 +5,7 @@ import { getAllPosts, getPostBySlug } from "@/lib/blog-posts";
 import { SiteLayout } from "@/components/SiteLayout";
 import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 import { AdBanner } from "@/components/AdSense";
+import Script from "next/script";
 
 interface BlogDetailPageProps {
   params: Promise<{ slug: string }>;
@@ -36,6 +37,12 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
 
   return (
     <SiteLayout>
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6775298130218510"
+        crossOrigin="anonymous"
+        strategy="afterInteractive"
+      />
       <article className="container-page py-16 max-w-3xl mx-auto">
         <Link
           href="/blog"

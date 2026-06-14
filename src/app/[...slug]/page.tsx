@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Metadata } from "next";
 import { AdBanner } from "@/components/AdSense";
+import Script from "next/script";
 
 const BLOG_POSTS = [
   {
@@ -226,6 +227,12 @@ function handleBlogPost(slug: string) {
 
   return (
     <main className="min-h-screen bg-background text-foreground">
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6775298130218510"
+        crossOrigin="anonymous"
+        strategy="afterInteractive"
+      />
       <article className="container-page py-16 max-w-3xl">
         <Link href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-smooth mb-6 inline-block">
           ← Back to Blog
