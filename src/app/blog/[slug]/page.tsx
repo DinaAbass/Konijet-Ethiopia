@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/blog-posts";
 import { SiteLayout } from "@/components/SiteLayout";
 import { MarkdownRenderer } from "@/components/MarkdownRenderer";
+import { AdBanner } from "@/components/AdSense";
 
 interface BlogDetailPageProps {
   params: Promise<{ slug: string }>;
@@ -61,6 +62,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
             <span>{new Date(post.date).toLocaleDateString()}</span>
           ) : null}
         </div>
+        <AdBanner slot="4783671292" className="my-8" />
         <div className="mt-8 max-w-none">
           <MarkdownRenderer content={post.content} />
         </div>

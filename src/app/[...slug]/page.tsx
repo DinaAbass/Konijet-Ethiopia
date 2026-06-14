@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Metadata } from "next";
+import { AdBanner } from "@/components/AdSense";
 
 const BLOG_POSTS = [
   {
@@ -237,6 +238,7 @@ function handleBlogPost(slug: string) {
             <span>{new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>
           </div>
         </header>
+        <AdBanner slot="4783671292" className="my-8" />
         <div
           className="prose prose-lg max-w-none prose-headings:font-display prose-h1:text-primary prose-h2:text-primary prose-h3:text-primary prose-p:text-foreground/90 prose-a:text-secondary hover:prose-a:text-secondary/80 prose-blockquote:border-secondary prose-blockquote:text-muted-foreground"
           dangerouslySetInnerHTML={{ __html: htmlContent }}
