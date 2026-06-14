@@ -39,17 +39,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
       <head>
-        {/* Google AdSense verification script — plain <script> tag in <head>
-            so Google's crawler finds it for site verification (AdSense requires
-            the snippet between <head></head> tags). Ad units via <AdBanner />
-            still respect the marketing cookie consent. */}
-        {process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID ? (
-          <script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID}`}
-            crossOrigin="anonymous"
-          />
-        ) : null}
+        {/* Google AdSense verification tag and script in <head> so Google's crawler
+            can verify the site unconditionally. Actual ad rendering via <AdBanner />
+            is gated behind the marketing cookie consent check. */}
+        <meta name="google-adsense-account" content={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID || "ca-pub-6775298130218510"} />
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID || "ca-pub-6775298130218510"}`}
+          crossOrigin="anonymous"
+        />
       </head>
       <body>
         <Providers>

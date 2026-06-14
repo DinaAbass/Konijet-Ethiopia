@@ -42,7 +42,7 @@ interface AdBannerProps {
  *   <AdBanner slot="1234567890" />
  */
 export function AdBanner({ slot, layout = "responsive", className = "" }: AdBannerProps) {
-  const id = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID;
+  const id = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID || "ca-pub-6775298130218510";
   const [allowed, setAllowed] = useState(false);
 
   useEffect(() => {
@@ -56,7 +56,7 @@ export function AdBanner({ slot, layout = "responsive", className = "" }: AdBann
     return () => window.removeEventListener("konjit:consentUpdate", handler);
   }, []);
 
-  if (!id || !allowed) return null;
+  if (!allowed) return null;
 
   return (
     <div className={`adsense-wrapper ${className}`}>

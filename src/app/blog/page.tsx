@@ -2,6 +2,7 @@ import Link from "next/link";
 import { BookOpen } from "lucide-react";
 import { getAllPosts } from "@/lib/blog-posts";
 import { SiteLayout } from "@/components/SiteLayout";
+import { AdBanner } from "@/components/AdSense";
 
 export default function BlogPage() {
   const posts = getAllPosts();
@@ -15,6 +16,7 @@ export default function BlogPage() {
         <h1 className="font-display text-5xl text-primary mt-2">
           Stories from Ethiopia
         </h1>
+        <AdBanner slot="4783671292" className="my-8" />
         {posts.length === 0 ? (
           <div className="mt-16 text-center">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-muted mb-6">
